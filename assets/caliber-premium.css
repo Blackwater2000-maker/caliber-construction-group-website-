@@ -1,0 +1,1446 @@
+/* ============================================================
+   CALIBER CONSTRUCTION GROUP — Premium Design Uplift
+   caliber-premium.css  |  $25K Quality Layer
+   ============================================================ */
+
+/* ============================================================
+   ENHANCED CSS VARIABLES
+   ============================================================ */
+:root {
+  --gold-dim:       rgba(184,145,42,0.12);
+  --gold-glow:      rgba(184,145,42,0.25);
+  --gold-border:    rgba(184,145,42,0.22);
+  --glass-navy:     rgba(7,20,41,0.82);
+  --glass-mid:      rgba(12,31,63,0.75);
+  --section-pad:    clamp(4rem, 8vw, 8rem);
+
+  /* Refined shadow system */
+  --shadow-card:    0 4px 24px rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.2);
+  --shadow-hover:   0 16px 48px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-gold:    0 0 40px rgba(184,145,42,0.15);
+
+  /* Refined transitions */
+  --ease-luxury:    cubic-bezier(0.23, 1, 0.32, 1);
+  --t-fast:         180ms var(--ease-luxury);
+  --t-med:          320ms var(--ease-luxury);
+  --t-slow:         500ms var(--ease-luxury);
+}
+
+/* ============================================================
+   GLOBAL PREMIUM POLISH
+   ============================================================ */
+
+/* Refined scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: rgba(184,145,42,0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ============================================================
+   ENGINEERING PARTNER BAR — Refined
+   ============================================================ */
+.partner-bar {
+  background: linear-gradient(90deg, #0a1a33 0%, #0d2244 50%, #0a1a33 100%);
+  border-bottom: 1px solid rgba(184,145,42,0.3);
+  padding: 0 1.5rem;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(240,240,240,0.75);
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.partner-bar-text { color: var(--gold); }
+.partner-bar-sep { color: rgba(184,145,42,0.5); font-size: 0.6rem; }
+.partner-bar-name { color: rgba(240,240,240,0.8); }
+
+/* ============================================================
+   NAVIGATION — Premium Refinements
+   ============================================================ */
+.site-nav {
+  position: sticky;
+  top: 30px; /* below partner bar */
+  z-index: 1000;
+  background: rgba(7,20,41,0.96);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(184,145,42,0.18);
+  height: 72px;
+  transition: background var(--t-med), box-shadow var(--t-med);
+}
+
+.site-nav.scrolled {
+  background: rgba(5,15,32,0.98);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.6), 0 1px 0 rgba(184,145,42,0.12);
+}
+
+/* Logo image sizing */
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity var(--t-fast);
+}
+
+.nav-logo:hover .nav-logo-img { opacity: 0.85; }
+
+/* Gold CTA button refinement */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.6rem;
+  background: linear-gradient(135deg, #c9a03a 0%, #b8912a 50%, #a07820 100%);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--t-fast);
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(184,145,42,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #d4a843 0%, #c9a03a 50%, #b8912a 100%);
+  box-shadow: 0 6px 24px rgba(184,145,42,0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.btn-gold:active { transform: translateY(0); }
+
+/* Outline button refinement */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.6rem;
+  background: transparent;
+  color: rgba(240,240,240,0.92);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border-radius: 3px;
+  border: 1px solid rgba(240,240,240,0.35);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--t-fast);
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(240,240,240,0.6);
+  color: #fff;
+}
+
+/* ============================================================
+   GOLD RULE — Refined
+   ============================================================ */
+.gold-rule {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-mid), transparent);
+  margin-top: 1rem;
+  border-radius: 1px;
+}
+
+.section-header.center .gold-rule {
+  margin-inline: auto;
+}
+
+/* ============================================================
+   SECTION HEADER — Enhanced typography hierarchy
+   ============================================================ */
+.section-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-header.center .section-eyebrow {
+  justify-content: center;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* Section titles — bigger, more authoritative */
+.section-title,
+.section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 58ch;
+  margin-top: 0.75rem;
+}
+
+.section-header.center .section-subtitle {
+  margin-inline: auto;
+}
+
+/* Increased section padding */
+.section {
+  padding-block: var(--section-pad);
+}
+
+/* ============================================================
+   HOMEPAGE HERO — $25K Luxury Treatment
+   ============================================================ */
+.hero-home {
+  min-height: 100dvh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video-overlay {
+  background: linear-gradient(
+    170deg,
+    rgba(7,20,41,0.35) 0%,
+    rgba(7,20,41,0.5) 35%,
+    rgba(7,20,41,0.72) 65%,
+    rgba(7,20,41,0.92) 88%,
+    rgba(7,20,41,1) 100%
+  );
+}
+
+.hero-home-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1000px;
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  padding-block: 6rem 4rem;
+}
+
+.hero-home-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.hero-home-eyebrow::before,
+.hero-home-eyebrow::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  opacity: 0.7;
+}
+
+.hero-home-eyebrow::after {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.hero-home h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 3rem + 5.5vw, 8.5rem);
+  font-weight: 500;
+  color: #fff;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+}
+
+.hero-home h1 em {
+  font-style: italic;
+  color: var(--gold-mid);
+}
+
+.hero-home-sub {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+  color: rgba(240,240,240,0.78);
+  max-width: 54ch;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.hero-home-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+/* Hero CTA buttons — enlarged for hero */
+.hero-home-buttons .btn-gold {
+  padding: 0.9rem 2.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  box-shadow: 0 8px 32px rgba(184,145,42,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.hero-home-buttons .btn-outline {
+  padding: 0.9rem 2.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* Trust badges row */
+.hero-trust-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(240,240,240,0.65);
+  text-transform: uppercase;
+}
+
+.hero-trust-badge::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   TRUST BAR — Premium Scrolling Marquee Feel
+   ============================================================ */
+.trust-bar {
+  background: linear-gradient(90deg, var(--navy-deep), #0d2244 50%, var(--navy-deep));
+  border-top: 1px solid rgba(184,145,42,0.15);
+  border-bottom: 1px solid rgba(184,145,42,0.15);
+  padding: 0;
+  overflow: hidden;
+}
+
+.trust-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding-block: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(240,240,240,0.7);
+  padding-inline: 1.25rem;
+  white-space: nowrap;
+}
+
+.trust-item-icon {
+  color: var(--gold);
+  font-size: 0.5rem;
+  line-height: 1;
+}
+
+.trust-sep {
+  width: 1px;
+  height: 14px;
+  background: rgba(184,145,42,0.3);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   THREE AREAS GRID — Bigger, more dramatic
+   ============================================================ */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.area-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3/2;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.area-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow);
+}
+
+.area-card:hover img { transform: scale(1.07); }
+
+.area-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(7,20,41,0.94) 0%,
+    rgba(7,20,41,0.55) 45%,
+    rgba(7,20,41,0.1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem;
+  transition: background var(--t-slow);
+}
+
+.area-card:hover .area-card-overlay {
+  background: linear-gradient(to top,
+    rgba(7,20,41,0.97) 0%,
+    rgba(7,20,41,0.7) 50%,
+    rgba(7,20,41,0.25) 100%
+  );
+}
+
+/* Gold accent line on area cards */
+.area-card-overlay::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-mid), transparent);
+  opacity: 0;
+  transition: opacity var(--t-med);
+}
+
+.area-card:hover .area-card-overlay::before { opacity: 1; }
+
+.area-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.area-card-desc {
+  font-size: 0.88rem;
+  color: rgba(240,240,240,0.75);
+  line-height: 1.65;
+  max-width: 38ch;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--t-med), transform var(--t-med);
+}
+
+.area-card:hover .area-card-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.area-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity var(--t-med), transform var(--t-med), color var(--t-fast);
+}
+
+.area-card:hover .area-card-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   MATERIALS GRID — 3-col luxury photo cards
+   ============================================================ */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.materials-grid .photo-card {
+  aspect-ratio: 5/4;
+}
+
+/* ============================================================
+   PHOTO CARD — Refined luxury overlay
+   ============================================================ */
+.photo-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.photo-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow);
+}
+
+.photo-card:hover img { transform: scale(1.06); }
+
+.photo-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(7,20,41,0.96) 0%,
+    rgba(7,20,41,0.6) 40%,
+    rgba(7,20,41,0.1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  transition: background var(--t-slow);
+}
+
+.photo-card:hover .photo-card-overlay {
+  background: linear-gradient(to top,
+    rgba(7,20,41,0.98) 0%,
+    rgba(7,20,41,0.75) 50%,
+    rgba(7,20,41,0.25) 100%
+  );
+}
+
+/* Gold accent bottom line */
+.photo-card-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-mid), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--t-med);
+}
+
+.photo-card:hover .photo-card-overlay::after { opacity: 1; }
+
+.photo-card-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.photo-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1rem + 0.75vw, 1.75rem);
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.photo-card-desc {
+  font-size: 0.82rem;
+  color: rgba(240,240,240,0.7);
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--t-med), transform var(--t-med);
+  max-width: 40ch;
+}
+
+.photo-card:hover .photo-card-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-card-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity var(--t-med), transform var(--t-med);
+}
+
+.photo-card:hover .photo-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   STATS ROW — Bold, premium treatment
+   ============================================================ */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: rgba(12,31,63,0.6);
+  border: 1px solid rgba(184,145,42,0.18);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity var(--t-med);
+}
+
+.stat-item:hover {
+  border-color: rgba(184,145,42,0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card), var(--shadow-gold);
+}
+
+.stat-item:hover::before { opacity: 1; }
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+  color: var(--gold);
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   CREW FULL-WIDTH SECTION — More cinematic
+   ============================================================ */
+.crew-section {
+  position: relative;
+  height: 560px;
+  overflow: hidden;
+}
+
+.crew-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 8s ease-out;
+}
+
+.crew-section:hover img { transform: scale(1.03); }
+
+.crew-section-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(7,20,41,0.92) 0%,
+    rgba(7,20,41,0.65) 50%,
+    rgba(7,20,41,0.25) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.crew-section-text {
+  max-width: 520px;
+  padding-inline: clamp(2rem, 7vw, 6rem);
+}
+
+.crew-section-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  color: #fff;
+  margin-bottom: 1.25rem;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.crew-section-text p {
+  font-size: 1rem;
+  color: rgba(240,240,240,0.78);
+  line-height: 1.85;
+  max-width: 50ch;
+}
+
+/* Gold accent line left of crew text */
+.crew-section-text::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-mid));
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   PAGE HERO — Refined for sub-pages
+   ============================================================ */
+.page-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transition: transform 8s ease-out;
+}
+
+.page-hero:hover .page-hero-bg img { transform: scale(1.03); }
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(7,20,41,1) 0%,
+    rgba(7,20,41,0.75) 40%,
+    rgba(7,20,41,0.4) 70%,
+    rgba(7,20,41,0.2) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--content-wide);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.08;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}
+
+.page-hero h2 {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem);
+  font-weight: 400;
+  color: rgba(240,240,240,0.72);
+  letter-spacing: 0.01em;
+  margin-top: 0;
+}
+
+/* ============================================================
+   CARDS — Premium base
+   ============================================================ */
+.card {
+  background: rgba(12,31,63,0.55);
+  border: 1px solid rgba(184,145,42,0.16);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+  box-shadow: var(--shadow-card);
+}
+
+.card:hover {
+  border-color: rgba(184,145,42,0.35);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ============================================================
+   FORM ELEMENTS — Premium treatment
+   ============================================================ */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(12,31,63,0.7);
+  border: 1px solid rgba(184,145,42,0.2);
+  border-radius: 4px;
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-faint);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: rgba(184,145,42,0.55);
+  background: rgba(12,31,63,0.9);
+  box-shadow: 0 0 0 3px rgba(184,145,42,0.1);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   CONTACT PAGE — Hero enhancement
+   ============================================================ */
+.contact-page-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(7,20,41,1) 0%,
+    rgba(10,25,55,0.95) 50%,
+    rgba(12,31,63,0.9) 100%
+  );
+  padding-block: 5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(ellipse at 80% 50%, rgba(184,145,42,0.06) 0%, transparent 70%);
+}
+
+.contact-page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,145,42,0.3), transparent);
+}
+
+/* ============================================================
+   FOOTER — Refined premium
+   ============================================================ */
+.site-footer {
+  background: linear-gradient(180deg, var(--navy-deep) 0%, #030c1e 100%);
+  border-top: 1px solid rgba(184,145,42,0.2);
+  padding-block: 4rem 2rem;
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  line-height: 1.7;
+  max-width: 32ch;
+}
+
+.footer-heading {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(184,145,42,0.2);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--t-fast), padding-left var(--t-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links a:hover {
+  color: var(--gold-mid);
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+
+/* ============================================================
+   MOBILE STICKY CTA BAR — refined
+   ============================================================ */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(7,20,41,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(184,145,42,0.25);
+  padding: 0.75rem 1rem;
+  gap: 0.75rem;
+  z-index: 998;
+  align-items: center;
+}
+
+.mobile-cta-bar .btn-gold,
+.mobile-cta-bar .btn-outline {
+  flex: 1;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.72rem;
+}
+
+/* ============================================================
+   BREADCRUMB — Refined
+   ============================================================ */
+.hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: rgba(240,240,240,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero-breadcrumb a {
+  color: rgba(240,240,240,0.55);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.hero-breadcrumb a:hover { color: var(--gold); }
+.hero-breadcrumb .sep { color: rgba(184,145,42,0.4); }
+
+/* ============================================================
+   ANIMATE-IN SYSTEM — Refined stagger
+   ============================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms var(--ease-luxury), transform 600ms var(--ease-luxury);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-delay-1 { transition-delay: 100ms; }
+.fade-in-delay-2 { transition-delay: 200ms; }
+.fade-in-delay-3 { transition-delay: 320ms; }
+.fade-in-delay-4 { transition-delay: 440ms; }
+.fade-in-delay-5 { transition-delay: 560ms; }
+
+/* ============================================================
+   SERVICE MATERIAL CARDS (individual service pages)
+   ============================================================ */
+.material-variant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.material-card {
+  background: rgba(12,31,63,0.55);
+  border: 1px solid rgba(184,145,42,0.16);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+  box-shadow: var(--shadow-card);
+}
+
+.material-card:hover {
+  border-color: rgba(184,145,42,0.4);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.material-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.material-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow);
+}
+
+.material-card:hover .material-card-img img { transform: scale(1.06); }
+
+.material-card-body {
+  padding: 1.5rem;
+}
+
+.material-card-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.material-card-tag::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+.material-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 0.9rem + 0.75vw, 1.5rem);
+  color: #fff;
+  margin-bottom: 0.6rem;
+  line-height: 1.15;
+}
+
+.material-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   SECTION DIVIDERS — Luxury gold lines
+   ============================================================ */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(184,145,42,0.25) 20%,
+    rgba(184,145,42,0.4) 50%,
+    rgba(184,145,42,0.25) 80%,
+    transparent 100%
+  );
+  margin-block: 0;
+}
+
+/* ============================================================
+   CONTACT TRUST CARD — Upgraded
+   ============================================================ */
+.contact-trust-card {
+  background: linear-gradient(135deg, rgba(12,31,63,0.8) 0%, rgba(7,20,41,0.95) 100%);
+  border: 1px solid rgba(184,145,42,0.22);
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-trust-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-mid), transparent);
+}
+
+/* License badge */
+.license-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(184,145,42,0.1);
+  border: 1px solid rgba(184,145,42,0.3);
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-mid);
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   MOBILE-FIRST RESPONSIVE REFINEMENTS
+   ============================================================ */
+@media (max-width: 1024px) {
+  .materials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .areas-grid .area-card {
+    aspect-ratio: 16/9;
+  }
+  
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .material-variant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-home h1 {
+    font-size: clamp(3rem, 11vw, 4.5rem);
+    line-height: 1.0;
+  }
+
+  .hero-home-eyebrow::before,
+  .hero-home-eyebrow::after {
+    width: 20px;
+  }
+
+  .partner-bar {
+    font-size: 0.62rem;
+    padding-inline: 0.75rem;
+    height: 28px;
+    gap: 0.4rem;
+  }
+
+  .partner-bar-text { display: none; }
+  .partner-bar-sep { display: none; }
+
+  .hero-trust-badges {
+    gap: 0.75rem;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .crew-section {
+    height: auto;
+    min-height: 360px;
+  }
+
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  .material-variant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   WORTHOUSE FEATURED — Special gold treatment
+   ============================================================ */
+.worthouse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: linear-gradient(90deg, rgba(184,145,42,0.15), rgba(184,145,42,0.08));
+  border: 1px solid rgba(184,145,42,0.4);
+  border-radius: 2px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold-mid);
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================================
+   UTILITY — Premium micro details
+   ============================================================ */
+
+/* Subtle section background variation */
+.section-dark { background-color: var(--navy-deep); }
+.section-navy { background-color: var(--navy); }
+.section-mid  { background-color: rgba(10,25,55,0.8); }
+
+/* Gold hairline borders for premium feel */
+.border-gold-top    { border-top: 1px solid rgba(184,145,42,0.2); }
+.border-gold-bottom { border-bottom: 1px solid rgba(184,145,42,0.2); }
+
+/* Inline gold text highlight */
+.text-gold  { color: var(--gold-mid); }
+.text-muted { color: var(--text-muted); }
+
+/* CTA sections */
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    rgba(12,31,63,0.9) 0%,
+    rgba(7,20,41,0.95) 100%
+  );
+  border-top: 1px solid rgba(184,145,42,0.18);
+  border-bottom: 1px solid rgba(184,145,42,0.18);
+  padding-block: 5rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.cta-section p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 50ch;
+  margin-inline: auto;
+  line-height: 1.75;
+}
+
+/* Two-col layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.two-col.gap-lg { gap: 5rem; }
+
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* Remove excess max-width restriction on p tags in cards */
+.card-body p,
+.material-card-body p,
+.standard-card-text,
+.spec-desc,
+.warranty-card-desc {
+  max-width: none;
+}
+
+/* ============================================================
+   HERO H1 ITALIC EM — gold serif italic for "Group"
+   ============================================================ */
+.hero-home h1 em {
+  font-style: italic;
+  color: var(--gold-mid);
+  display: inline;
+}
+
+/* ============================================================
+   NAV STICKY TOP — align below 30px partner bar
+   ============================================================ */
+.partner-bar { height: 30px; }
+.site-nav { top: 30px; }
+
+@media (max-width: 640px) {
+  .partner-bar { height: 28px; }
+  .site-nav { top: 28px; }
+}
