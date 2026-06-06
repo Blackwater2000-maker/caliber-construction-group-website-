@@ -165,4 +165,79 @@
     }
   });
 
+// ---- CONTACT FORM VALIDATION & AJAX SUBMIT ----
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    const nameInput   = document.getElementById('name');
+    const phoneInput  = document.getElementById('phone');
+    const emailInput  = document.getElementById('email');
+    const submitBtn   = document.getElementById('form-submit');
+    const successMsg  = document.getElementById('form-success');
+    const serverError = document.getElementById('form-server-error');
+
+    function showError(input, errorId) {
+      input.classList.add('input-error');
+      const err = document.getElementById(errorId);
+      if (err) err.style.display = 'block';
+    }
+    function clearError(input, errorId) {
+      input.classList.remove('input-error');
+      const err = document.getElementById(errorId);
+      if (err) err.style.display = 'none';
+    }
+
+    // Inline clear on fix
+    if (nameInput)  nameInput.addEventListener('input',  () => clearError(nameInput,  'name-error'));
+    if (phoneInput) phoneInput.addEventListener('input', () => clearError(phoneInput, 'phone-error'));
+    if (emailInput) emailInput.addEventListener('input', () => clearError(emailInput, 'email-error'));
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      // Validate name
+      if (!nameInput || !nameInput.value.trim()) {
+        showError(nameInput, 'name-error'); valid = false;
+      }
+      // Validate phone (at least 10 digits)
+      const phoneDigits = (phoneInput?.value || '').replace(/\D/g, '');
+      if (phoneDigits.length < 10) {
+        showError(phoneInput, 'phone-error'); valid = false;
+      }
+      // Validate email format if provided
+      const emailVal = emailInput?.value.trim() || '';
+      if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+        showError(emailInput, 'email-error'); valid = false;
+      }
+
+      if (!valid) return;
+
+      // Submit via fetch
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const resp = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (resp.ok) {
+          contactForm.reset();
+          successMsg.style.display = 'block';
+          submitBtn.style.display  = 'none';
+          serverError.style.display = 'none';
+        } else {
+          serverError.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message & Request Inspection';
+        }
+      } catch (_) {
+        serverError.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message & Request Inspection';
+      }
+    });
+  }
+
 })();

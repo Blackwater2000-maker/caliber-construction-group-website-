@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/caliber-shared.css">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon_256.png">
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -146,24 +149,37 @@
       <div class="contact-layout">
         <!-- FORM -->
         <div class="fade-in">
-          <form action="#" method="post" novalidate>
+          <form id="contact-form" action="https://formspree.io/f/xvgrovpz" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Inspection Request — Caliber Construction Group">
+            <input type="hidden" name="_next" value="contact.html?sent=1">
             <div class="form-group">
-              <label class="form-label" for="name">Your Name</label>
-              <input class="form-control" type="text" id="name" name="name" placeholder="John Smith" autocomplete="name">
+              <label class="form-label" for="name">Your Name <span class="required">*</span></label>
+              <input class="form-control" type="text" id="name" name="name" placeholder="John Smith" autocomplete="name" required>
+              <span class="form-error" id="name-error">Please enter your name.</span>
             </div>
             <div class="form-group">
-              <label class="form-label" for="phone">Phone Number</label>
-              <input class="form-control" type="tel" id="phone" name="phone" placeholder="(407) 000-0000" autocomplete="tel">
+              <label class="form-label" for="phone">Phone Number <span class="required">*</span></label>
+              <input class="form-control" type="tel" id="phone" name="phone" placeholder="(407) 000-0000" autocomplete="tel" required>
+              <span class="form-error" id="phone-error">Please enter a valid phone number.</span>
             </div>
             <div class="form-group">
               <label class="form-label" for="email">Email Address</label>
               <input class="form-control" type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
+              <span class="form-error" id="email-error">Please enter a valid email address.</span>
             </div>
             <div class="form-group">
               <label class="form-label" for="message">Tell Us About Your Project</label>
-              <textarea class="form-control" id="message" name="message" placeholder="Describe your roofing needs, property type, current condition, or any concerns..."></textarea>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Describe your roofing needs, property type, current condition, or any concerns..."></textarea>
             </div>
-            <button type="submit" class="btn-gold" style="width:100%;padding:1rem 0;">Send Message &amp; Request Inspection</button>
+            <div id="form-success" class="form-success-msg" style="display:none;">
+              ✓ Message sent! We'll be in touch within one business day.
+            </div>
+            <div id="form-server-error" class="form-error-msg" style="display:none;">
+              Something went wrong. Please call us directly at (407) 439-1200.
+            </div>
+            <button type="submit" id="form-submit" class="btn-gold" style="width:100%;padding:1rem 0;">
+              Send Message &amp; Request Inspection
+            </button>
           </form>
         </div>
 
