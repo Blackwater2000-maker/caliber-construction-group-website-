@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: var(--nav-height);
+  
 }
 
 .hero-video-wrap {

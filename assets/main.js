@@ -156,9 +156,9 @@
     });
   });
 
-  // Close dropdowns on outside click
+  // Close dropdowns on outside click OR when nav link is clicked
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-links')) {
+    if (!e.target.closest('.nav-links') || e.target.tagName === 'A') {
       document.querySelectorAll('.nav-dropdown-trigger').forEach(t => {
         t.setAttribute('aria-expanded', 'false');
       });
