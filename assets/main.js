@@ -23,9 +23,6 @@
     if (!navDrawer) return;
     navDrawer.classList.add('is-open');
     if (navBackdrop) {
-      navBackdrop.style.display = 'block';
-      // Force reflow so opacity transition fires
-      navBackdrop.getBoundingClientRect();
       navBackdrop.classList.add('visible');
     }
     document.body.classList.add('drawer-open');
@@ -40,8 +37,6 @@
     navDrawer.classList.remove('is-open');
     if (navBackdrop) {
       navBackdrop.classList.remove('visible');
-      // Hide after transition
-      setTimeout(() => { navBackdrop.style.display = 'none'; }, 320);
     }
     document.body.classList.remove('drawer-open');
     if (hamburger) {

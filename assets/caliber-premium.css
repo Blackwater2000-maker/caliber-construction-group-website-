@@ -1574,7 +1574,6 @@
 
 /* Overlay backdrop */
 .nav-drawer-backdrop {
-  display: none;
   position: fixed;
   inset: 0;
   background: rgba(3,8,20,0.75);
@@ -1582,11 +1581,13 @@
   -webkit-backdrop-filter: blur(4px);
   z-index: 1099;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
 }
 
 .nav-drawer-backdrop.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* The drawer itself */
@@ -1602,7 +1603,8 @@
   overflow-y: auto;
   overflow-x: hidden;
   transform: translateX(100%);
-  transition: transform 0.36s var(--ease-luxury);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
   display: flex;
   flex-direction: column;
   padding: 0;
