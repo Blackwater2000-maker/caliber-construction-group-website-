@@ -22,6 +22,8 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+  <!-- Google reCAPTCHA v3 — replace YOUR_RECAPTCHA_SITE_KEY at google.com/recaptcha/admin -->
+  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY" async></script>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -190,6 +192,8 @@
             <div id="form-server-error" class="form-error-msg" style="display:none;">
               Something went wrong. Please call us directly at (407) 517-8200.
             </div>
+            <!-- reCAPTCHA v3 hidden token — auto-populated on submit -->
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
             <button type="submit" id="form-submit" class="btn-gold" style="width:100%;padding:1rem 0;">
               Send Message &amp; Request Inspection
             </button>
@@ -314,6 +318,25 @@
   </div>
 </footer>
 <script src="assets/main.js" defer></script>
+<script>
+// reCAPTCHA v3 — execute on form submit
+(function(){
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    var siteKey = 'YOUR_RECAPTCHA_SITE_KEY';
+    if (siteKey === 'YOUR_RECAPTCHA_SITE_KEY') return; // not yet configured
+    e.preventDefault();
+    if (typeof grecaptcha === 'undefined') { form.submit(); return; }
+    grecaptcha.ready(function() {
+      grecaptcha.execute(siteKey, {action: 'contact_form'}).then(function(token) {
+        document.getElementById('g-recaptcha-response').value = token;
+        form.submit();
+      });
+    });
+  }, true);
+})();
+</script>
   <!-- Tidio Live Chat — replace YOUR_TIDIO_KEY with your key from tidio.com/panel -->
   <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
 </body>
