@@ -1709,7 +1709,9 @@
 .nav-mobile-cta-phone:active { opacity: 0.8; }
 
 .nav-mobile-cta-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: center;
   padding: 0.8rem 1rem;
@@ -1723,6 +1725,7 @@
   border-radius: 4px;
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(184,145,42,0.28);
+  box-sizing: border-box;
 }
 
 .nav-mobile-cta-btn::after { display: none; }

@@ -1290,22 +1290,33 @@ textarea.form-control {
 /* ============================================================
    FADE-IN SCROLL ANIMATIONS
    ============================================================ */
+/* fade-in: elements are visible immediately on load — no pop-in while scrolling */
 .fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
-              transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.fade-in-delay-1 { transition-delay: 100ms; }
-.fade-in-delay-2 { transition-delay: 200ms; }
-.fade-in-delay-3 { transition-delay: 300ms; }
-.fade-in-delay-4 { transition-delay: 400ms; }
+/* Hero-only: subtle entrance animation just for above-the-fold hero text */
+.hero-home .fade-in,
+.page-hero .fade-in,
+.article-hero .fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-home .fade-in.visible,
+.page-hero .fade-in.visible,
+.article-hero .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-delay-1 { transition-delay: 120ms; }
+.fade-in-delay-2 { transition-delay: 240ms; }
+.fade-in-delay-3 { transition-delay: 360ms; }
+.fade-in-delay-4 { transition-delay: 480ms; }
 
 /* ============================================================
    MOBILE STICKY BOTTOM BAR
@@ -1635,34 +1646,84 @@ textarea.form-control {
 .partner-bar {
   background: var(--navy-deep);
   border-bottom: 1px solid rgba(184,145,42,0.2);
-  padding: 6px var(--space-6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
+  height: 32px;
   position: sticky;
   top: 0;
   z-index: 1001;
   width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
-.partner-bar-text {
+
+/* Fade masks on left and right edges */
+.partner-bar::before,
+.partner-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+.partner-bar::before {
+  left: 0;
+  background: linear-gradient(to right, var(--navy-deep) 0%, transparent 100%);
+}
+.partner-bar::after {
+  right: 0;
+  background: linear-gradient(to left, var(--navy-deep) 0%, transparent 100%);
+}
+
+/* Scrolling track */
+.partner-bar-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.partner-bar-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Individual items inside track */
+.partner-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2.5rem;
   font-family: var(--font-body);
   font-size: 0.72rem;
+  letter-spacing: 0.07em;
+}
+
+.partner-bar-text {
   color: var(--text-muted);
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
 }
 .partner-bar-sep {
   color: var(--gold);
-  font-size: 0.7rem;
-  opacity: 0.6;
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
 .partner-bar-name {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
   color: var(--gold);
   font-weight: 500;
-  letter-spacing: 0.06em;
+}
+
+/* Pause on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .partner-bar-track { animation: none; }
 }
 
 /* Logo image in nav */
