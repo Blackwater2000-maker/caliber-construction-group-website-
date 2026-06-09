@@ -22,8 +22,8 @@
     gtag('js', new Date());
     gtag('config', 'G-GR164RBGXK');
   </script>
-  <!-- Google reCAPTCHA v3 — replace YOUR_RECAPTCHA_SITE_KEY at google.com/recaptcha/admin -->
-  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY" async></script>
+  <!-- Google reCAPTCHA v3 — replace 6LehYRYtAAAAAGM15TIjJ3oMsTeOvN2AYJm_CvB1 at google.com/recaptcha/admin -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LehYRYtAAAAAGM15TIjJ3oMsTeOvN2AYJm_CvB1" async></script>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -379,8 +379,8 @@
   var form = document.getElementById('contact-form');
   if (!form) return;
   form.addEventListener('submit', function(e) {
-    var siteKey = 'YOUR_RECAPTCHA_SITE_KEY';
-    if (siteKey === 'YOUR_RECAPTCHA_SITE_KEY') return; // not yet configured
+    var siteKey = '6LehYRYtAAAAAGM15TIjJ3oMsTeOvN2AYJm_CvB1';
+    if (siteKey === '6LehYRYtAAAAAGM15TIjJ3oMsTeOvN2AYJm_CvB1') return; // not yet configured
     e.preventDefault();
     if (typeof grecaptcha === 'undefined') { form.submit(); return; }
     grecaptcha.ready(function() {
