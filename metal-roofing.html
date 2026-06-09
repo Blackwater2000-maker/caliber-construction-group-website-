@@ -14,6 +14,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon_256.png">
+  <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -83,6 +91,7 @@
           <a href="projects.html">Project Gallery</a>
           <a href="financing.html">Financing Options</a>
           <a href="warranty.html">Warranties &amp; Guarantees</a>
+          <a href="blog/index.html">Blog &amp; News</a>
         </div>
       </li>
       <li><a href="contact.html">Contact</a></li>
@@ -308,5 +317,7 @@
   </div>
 </footer>
 <script src="assets/main.js" defer></script>
+  <!-- Tidio Live Chat — replace YOUR_TIDIO_KEY with your key from tidio.com/panel -->
+  <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
 </body>
 </html>
