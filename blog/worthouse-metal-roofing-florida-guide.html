@@ -31,8 +31,19 @@
       display: flex;
       align-items: flex-end;
       background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+      background-image: url('../assets/img/blog-worthouse-hero.png');
+      background-size: cover;
+      background-position: center;
       overflow: hidden;
     }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7,20,41,0.88) 0%, rgba(7,20,41,0.35) 100%);
+      z-index: 1;
+    }
+    .article-hero-content { z-index: 2; position: relative; }
     .article-hero-content {
       position: relative;
       z-index: 2;
