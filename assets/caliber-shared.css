@@ -380,22 +380,8 @@ table { border-collapse: collapse; width: 100%; }
 .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 /* Mobile menu overlay */
-.nav-mobile {
-  display: none;
-  position: fixed;
-  top: calc(var(--nav-height) + var(--partner-bar-height));
-  left: 0; right: 0;
-  bottom: 0;
-  background: rgba(7,20,41,0.98);
-  backdrop-filter: blur(12px);
-  overflow-y: auto;
-  z-index: 999;
-  padding: var(--space-6);
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.nav-mobile.open { display: flex; }
+/* nav-mobile base: controlled entirely by caliber-premium.css drawer system */
+.nav-mobile.open { /* legacy class — no-op */ }
 
 .nav-mobile a {
   display: block;
