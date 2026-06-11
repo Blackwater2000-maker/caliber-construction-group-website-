@@ -25,7 +25,12 @@
     /* ── Hero ── */
     .financing-hero {
       position: relative;
-      min-height: 520px;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      min-height: calc(100vh - 100px);
       display: flex;
       align-items: flex-end;
       overflow: hidden;
@@ -295,6 +300,10 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+    /* Fusion art — Jaxsen is on the right side of the image */
+    .lender-card-inner:not(.reverse) .lender-visual-bg img {
+      object-position: right center;
     }
     .lender-visual-bg::after {
       content: '';
@@ -661,7 +670,14 @@
     }
     @media (max-width: 600px) {
       .financing-intro, .lenders-section, .heloc-explainer, .financing-faq, .financing-bottom-cta { padding: 3.5rem 0; }
-      .financing-hero { min-height: 480px; }
+      .financing-hero {
+        min-height: 100svh;
+        width: 100vw;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        left: 50%;
+        right: 50%;
+      }
       .why-card-art { height: 160px; }
     }
   </style>
@@ -873,7 +889,7 @@
       </div>
       <div class="why-card">
         <div class="why-card-art">
-          <img src="assets/img/financing-fusion-art.png" alt="Leverage your home equity" loading="lazy">
+          <img src="assets/img/financing-fusion-art.png" alt="Leverage your home equity" loading="lazy" style="object-position:right center;">
         </div>
         <div class="why-card-body">
           <div class="why-card-label">Unlock Equity</div>
