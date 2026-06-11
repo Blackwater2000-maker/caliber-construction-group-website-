@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clay & Concrete Tile Roofing | Caliber Construction Group</title>
-  <meta name="description" content="Caliber Construction Group — Central Florida's Premier Roofing Contractor">
+  <title>Clay & Concrete Tile Roofing | Westlake Royal | Caliber Construction Group</title>
+  <meta name="description" content="Caliber Construction Group installs Westlake Royal Building Products tile roofing — US Tile® clay, Newpoint™ concrete, Unified Steel®, and DaVinci® composite. Central Florida's tile roofing specialists.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon_256.png">
-  <!-- Google Analytics GA4 — replace G-GR164RBGXK with your Measurement ID from analytics.google.com -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR164RBGXK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,6 +21,352 @@
     gtag('js', new Date());
     gtag('config', 'G-GR164RBGXK');
   </script>
+  <style>
+    /* ── TILE HERO VIDEO ── */
+    .tile-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+    .tile-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .tile-hero-img-fallback {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .tile-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(
+        170deg,
+        rgba(7,20,41,0.25) 0%,
+        rgba(7,20,41,0.45) 35%,
+        rgba(7,20,41,0.72) 65%,
+        rgba(7,20,41,0.93) 88%,
+        rgba(7,20,41,1) 100%
+      );
+    }
+    .tile-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      width: 100%;
+      margin-inline: auto;
+      padding-inline: clamp(1.5rem, 5vw, 3rem);
+      padding-block: 7rem 5rem;
+      text-align: center;
+    }
+    .tile-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(184,145,42,0.15);
+      border: 1px solid rgba(184,145,42,0.35);
+      border-radius: 100px;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .tile-hero-badge span { opacity: 0.6; }
+    .tile-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 2.2rem + 4vw, 6rem);
+      font-weight: 500;
+      color: #fff;
+      line-height: 0.95;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      text-shadow: 0 4px 40px rgba(0,0,0,0.45);
+    }
+    .tile-hero h1 em {
+      font-style: italic;
+      color: var(--gold-mid);
+    }
+    .tile-hero-sub {
+      font-size: clamp(1rem, 0.9rem + 0.4vw, 1.15rem);
+      color: rgba(240,240,240,0.78);
+      max-width: 52ch;
+      margin-inline: auto;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .tile-hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .tile-hero-buttons .btn-gold {
+      padding: 0.9rem 2.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+    }
+    .tile-hero-buttons .btn-outline {
+      padding: 0.9rem 2.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      border-color: rgba(255,255,255,0.4);
+    }
+    .tile-hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.4);
+    }
+    .tile-hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(184,145,42,0.6), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* ── WESTLAKE ROYAL INTRO BANNER ── */
+    .westlake-banner {
+      background: linear-gradient(135deg, rgba(12,31,63,0.98) 0%, rgba(7,20,41,1) 100%);
+      border-top: 2px solid rgba(184,145,42,0.4);
+      border-bottom: 1px solid rgba(184,145,42,0.15);
+      padding: 3rem 0;
+    }
+    .westlake-banner-inner {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .westlake-banner-logo-wrap {
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .westlake-banner-logo-wrap span {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1a3a6b;
+      white-space: nowrap;
+    }
+    .westlake-banner-text { flex: 1; min-width: 260px; }
+    .westlake-banner-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .westlake-banner-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.4rem);
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      line-height: 1.1;
+    }
+    .westlake-banner-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 56ch;
+    }
+    .westlake-certs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.1rem;
+    }
+    .westlake-cert-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(184,145,42,0.1);
+      border: 1px solid rgba(184,145,42,0.25);
+      border-radius: 100px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+    }
+    .westlake-cert-chip::before { content: '✓'; }
+
+    /* ── PRODUCT LINE CARDS ── */
+    .westlake-products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) { .westlake-products-grid { grid-template-columns: 1fr; } }
+
+    .westlake-product-card {
+      background: rgba(26,58,107,0.2);
+      border: 1px solid rgba(184,145,42,0.18);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 320ms ease, transform 320ms ease;
+    }
+    .westlake-product-card:hover {
+      border-color: rgba(184,145,42,0.45);
+      transform: translateY(-4px);
+    }
+    .westlake-product-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .westlake-product-card-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+    }
+    .westlake-product-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .westlake-product-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.8rem);
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      line-height: 1.1;
+    }
+    .westlake-product-tagline {
+      font-size: 0.88rem;
+      color: var(--gold-mid);
+      font-style: italic;
+      margin-bottom: 0.8rem;
+    }
+    .westlake-product-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.1rem;
+    }
+    .westlake-product-specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .westlake-spec-item {
+      background: rgba(7,20,41,0.4);
+      border-radius: 6px;
+      padding: 0.5rem 0.7rem;
+    }
+    .westlake-spec-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .westlake-spec-val {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .westlake-product-profiles {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 0.85rem;
+      margin-top: 0.85rem;
+    }
+    .westlake-product-profiles strong {
+      color: rgba(240,240,240,0.7);
+      font-weight: 600;
+    }
+
+    /* ── WESTLAKE FULL-WIDTH HIGHLIGHT ── */
+    .westlake-highlight {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy-deep);
+    }
+    .westlake-highlight-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      opacity: 0.35;
+    }
+    .westlake-highlight-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(7,20,41,0.5) 0%, rgba(7,20,41,0.8) 100%);
+      padding: 3rem 2rem;
+    }
+    .westlake-highlight-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.5rem + 3vw, 4rem);
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      max-width: 20ch;
+    }
+    .westlake-highlight-title em { color: var(--gold-mid); font-style: italic; }
+    .westlake-highlight-sub {
+      font-size: 1.05rem;
+      color: rgba(240,240,240,0.75);
+      max-width: 50ch;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 640px) {
+      .westlake-banner-inner { flex-direction: column; gap: 1.5rem; }
+      .westlake-banner-logo-wrap { align-self: flex-start; }
+      .tile-hero h1 { font-size: 2.8rem; }
+    }
+  </style>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -32,13 +377,13 @@
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
     <span class="partner-bar-item"><span class="partner-bar-text">FL License</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">#CCC1337709</span></span>
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
-    <span class="partner-bar-item"><span class="partner-bar-text">Central Florida</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">Residential &amp; Commercial Roofing</span></span>
+    <span class="partner-bar-item"><span class="partner-bar-text">Tile Manufacturer</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">Westlake Royal Building Products</span></span>
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
     <span class="partner-bar-item"><span class="partner-bar-text">Engineering Partner</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">In partnership with Linn Engineering &amp; Design, Inc. — Winter Park, FL</span></span>
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
     <span class="partner-bar-item"><span class="partner-bar-text">FL License</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">#CCC1337709</span></span>
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
-    <span class="partner-bar-item"><span class="partner-bar-text">Central Florida</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">Residential &amp; Commercial Roofing</span></span>
+    <span class="partner-bar-item"><span class="partner-bar-text">Tile Manufacturer</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">Westlake Royal Building Products</span></span>
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
   </div>
 </div>
@@ -50,9 +395,7 @@
     </a>
 
     <ul class="nav-links" role="list">
-      <!-- Home -->
       <li><a href="index.html">Home</a></li>
-      <!-- About -->
       <li>
         <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
           About
@@ -64,7 +407,6 @@
           <a href="careers.html">Careers — We're Hiring</a>
         </div>
       </li>
-      <!-- Services -->
       <li>
         <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
           Services
@@ -104,6 +446,9 @@
             <a href="warranty.html">Warranties &amp; Guarantees</a>
             <a href="blog/index.html">Blog &amp; News</a>
             <div class="nav-dropdown-divider"></div>
+            <span class="nav-dropdown-col-header nav-dropdown-section-label">Manufacturers</span>
+            <a href="tile-roofing.html#westlake" class="nav-dropdown-highlight">Westlake Royal — Tile Products</a>
+            <div class="nav-dropdown-divider"></div>
             <span class="nav-dropdown-col-header nav-dropdown-section-label">Financing</span>
             <a href="financing.html" class="nav-dropdown-highlight">Financing Options</a>
           </div>
@@ -130,13 +475,10 @@
 
 <!-- MOBILE SIDE DRAWER -->
 <nav class="nav-mobile" id="nav-drawer" role="dialog" aria-label="Mobile navigation" aria-modal="true">
-  <!-- Drawer Header -->
   <div class="nav-mobile-drawer-header">
     <img src="assets/logo_full_400.png" alt="Caliber Construction Group" class="nav-mobile-drawer-logo">
     <button class="nav-mobile-drawer-close" id="nav-drawer-close" aria-label="Close menu">&#10005;</button>
   </div>
-
-  <!-- CTA Block -->
   <div class="nav-mobile-cta-block">
     <a href="tel:4075178200" class="nav-mobile-cta-phone">
       <span class="nav-mobile-cta-phone-label">Office</span>
@@ -147,8 +489,6 @@
     </a>
     <a href="contact.html" class="nav-mobile-cta-btn">Get Your Free Inspection</a>
   </div>
-
-  <!-- Scrollable Links -->
   <div class="nav-mobile-scroll">
     <div class="nav-mobile-section">
       <a href="index.html">Home</a>
@@ -191,6 +531,12 @@
             <a href="blog/index.html">Blog &amp; News</a>
           </div>
           <div class="nav-mobile-subsection nav-mobile-subsection--partners">
+            <span class="nav-mobile-subsection-label">Manufacturers</span>
+            <a href="tile-roofing.html#westlake" class="nav-mobile-partner-link">
+              <span class="nav-mobile-partner-dot"></span>Westlake Royal — Tile Products
+            </a>
+          </div>
+          <div class="nav-mobile-subsection nav-mobile-subsection--partners">
             <span class="nav-mobile-subsection-label">Financing</span>
             <a href="financing.html" class="nav-mobile-partner-link">
               <span class="nav-mobile-partner-dot"></span>Financing Options
@@ -203,8 +549,6 @@
       <a href="contact.html">Contact Us</a>
     </div>
   </div>
-
-  <!-- License badge -->
   <div class="nav-mobile-license">
     <strong>FL State Certified &middot; #CCC1337709</strong>
     In partnership with Linn Engineering &amp; Design, Inc.
@@ -215,93 +559,246 @@
 <a href="tel:4075178200" class="float-call-btn" aria-label="Call (407) 517-8200">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 </a>
+
 <main>
-  <section class="page-hero" style="min-height:480px;" aria-label="Tile roofing hero">
-    <div class="page-hero-bg" style="background-image:url('assets/img/tile-hero.png');"></div>
-    <div class="page-hero-overlay"></div>
-    <div class="page-hero-content container">
-      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="sep">/</span>
-        <a href="services.html">Services</a>
-        <span class="sep">/</span>
-        <span>Clay &amp; Concrete Tile</span>
-      </nav>
-      <p class="hero-eyebrow fade-in">Residential Roofing</p>
-      <h1 class="fade-in fade-in-delay-1">Clay &amp; Concrete Tile Roofing</h1>
-      <h2 class="fade-in fade-in-delay-2">Tile Roofing Done the Right Way</h2>
+
+  <!-- ═══ HERO — FULL SCREEN VIDEO ═══ -->
+  <section class="tile-hero" aria-label="Tile roofing hero">
+    <!-- Fallback image shown while video loads or on mobile -->
+    <img class="tile-hero-img-fallback" src="assets/img/westlake-ustile-clay-roofing.png" alt="Luxury Florida home with clay tile roofing by Westlake Royal" loading="eager">
+    <!-- Video background — replace src with actual MP4 when available -->
+    <video class="tile-hero-video" autoplay muted loop playsinline poster="assets/img/westlake-ustile-clay-roofing.png" aria-hidden="true">
+      <source src="assets/img/tile-hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="tile-hero-overlay"></div>
+    <div class="tile-hero-content">
+      <div class="tile-hero-badge fade-in">
+        <span>&#9733;</span> Westlake Royal Building Products <span>·</span> Premium Tile Manufacturer
+      </div>
+      <h1 class="fade-in fade-in-delay-1">Clay &amp; Concrete<br><em>Tile Roofing</em></h1>
+      <p class="tile-hero-sub fade-in fade-in-delay-2">Caliber installs the full Westlake Royal tile portfolio — genuine clay, concrete, stone-coated steel, and composite. Every system hurricane-rated, Class A fire-rated, and backed by lifetime warranties.</p>
+      <div class="tile-hero-buttons fade-in fade-in-delay-3">
+        <a href="contact.html" class="btn-gold">Schedule Free Consultation</a>
+        <a href="#westlake" class="btn-outline">View Products ↓</a>
+      </div>
+    </div>
+    <div class="tile-hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="tile-hero-scroll-line"></div>
     </div>
   </section>
 
+  <!-- ═══ WESTLAKE ROYAL BRAND BANNER ═══ -->
+  <div class="westlake-banner" id="westlake">
+    <div class="container">
+      <div class="westlake-banner-inner">
+        <div class="westlake-banner-logo-wrap">
+          <span>Westlake Royal<br>Building Products</span>
+        </div>
+        <div class="westlake-banner-text">
+          <p class="westlake-banner-eyebrow">Our Premium Tile Manufacturer</p>
+          <h2 class="westlake-banner-title">Every Style. Every Standard.</h2>
+          <p class="westlake-banner-desc">Westlake Royal Building Products is the industry's most complete roofing portfolio — concrete, clay, stone-coated steel, and composite. All products are manufactured in the USA, engineered for extreme weather, and backed by some of the strongest warranties in roofing.</p>
+          <div class="westlake-certs">
+            <span class="westlake-cert-chip">Hurricane Wind Rated</span>
+            <span class="westlake-cert-chip">Class A Fire Rated</span>
+            <span class="westlake-cert-chip">Class 4 Hail Impact</span>
+            <span class="westlake-cert-chip">Made in the USA</span>
+            <span class="westlake-cert-chip">Cool Roof Options</span>
+            <span class="westlake-cert-chip">Lifetime Warranties</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ WESTLAKE PRODUCT LINES ═══ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <p class="section-eyebrow">Westlake Royal Portfolio</p>
+        <h2 class="section-title">Four Product Lines. One Standard.</h2>
+        <p class="section-subtitle">Caliber installs the complete Westlake Royal roofing lineup. We'll help you choose the right system for your home's architecture, budget, and Florida's climate demands.</p>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="westlake-products-grid">
+
+        <!-- US TILE CLAY -->
+        <div class="westlake-product-card fade-in fade-in-delay-1">
+          <img class="westlake-product-card-img" src="assets/img/westlake-ustile-clay-roofing.png" alt="US Tile clay roofing on Florida estate home">
+          <div class="westlake-product-card-body">
+            <p class="westlake-product-label">&#9733; Premium Clay</p>
+            <h3 class="westlake-product-name">US Tile® Clay Roofing</h3>
+            <p class="westlake-product-tagline">"Artisan-crafted with earth-conscious values"</p>
+            <p class="westlake-product-desc">Genuine kiln-fired clay — the authentic Florida tile standard. US Tile is the first clay tile roof in the world to earn <strong>Cradle-to-Cradle Gold certification</strong>. Beautiful, sustainable, and built to last generations.</p>
+            <div class="westlake-product-specs">
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Wind</span>
+                <span class="westlake-spec-val">Hurricane Rated</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Fire</span>
+                <span class="westlake-spec-val">Class A</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Material</span>
+                <span class="westlake-spec-val">100% Natural Clay</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Cert</span>
+                <span class="westlake-spec-val">Cradle-to-Cradle Gold</span>
+              </div>
+            </div>
+            <p class="westlake-product-profiles"><strong>Profiles:</strong> 1-Piece S-Tile, 2-Piece Mission, 2-Piece Monarch, ClayLite® (lightweight reroof), ClayMax®, Romano Pans &mdash; Terracotta, Merlot, Java Blend &amp; more</p>
+          </div>
+        </div>
+
+        <!-- NEWPOINT CONCRETE -->
+        <div class="westlake-product-card fade-in fade-in-delay-2">
+          <img class="westlake-product-card-img" src="assets/img/westlake-newpoint-concrete-tile.png" alt="Newpoint concrete tile roofing on luxury Florida home">
+          <div class="westlake-product-card-body">
+            <p class="westlake-product-label">Concrete Tile</p>
+            <h3 class="westlake-product-name">Newpoint™ Concrete Tile</h3>
+            <p class="westlake-product-tagline">"Tough on weather. Easy on worry."</p>
+            <p class="westlake-product-desc">Weather-proven concrete tile in 34 profiles — from classic Barcelona barrel to modern flat slate. Engineered for Florida's heat, wind, and storm load requirements with improved foam adhesion for superior wind uplift resistance.</p>
+            <div class="westlake-product-specs">
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Wind</span>
+                <span class="westlake-spec-val">Hurricane Rated</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Fire</span>
+                <span class="westlake-spec-val">Class A</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Warranty</span>
+                <span class="westlake-spec-val">Limited Lifetime</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Colors</span>
+                <span class="westlake-spec-val">60+ Options</span>
+              </div>
+            </div>
+            <p class="westlake-product-profiles"><strong>Profiles:</strong> Barcelona, Mission "S", Saxony® Slate, Saxony® Shake, Villa, Duralite® España, Madera 900 &amp; 28 more &mdash; Standard, Mid-Weight &amp; Light-Weight options</p>
+          </div>
+        </div>
+
+        <!-- UNIFIED STEEL -->
+        <div class="westlake-product-card fade-in fade-in-delay-1">
+          <img class="westlake-product-card-img" src="assets/img/westlake-unified-steel-roofing.png" alt="Unified Steel stone-coated roofing on modern Florida home">
+          <div class="westlake-product-card-body">
+            <p class="westlake-product-label">Stone-Coated Steel</p>
+            <h3 class="westlake-product-name">Unified Steel® Stone Coated</h3>
+            <p class="westlake-product-tagline">"Traditional looks. Modern strength."</p>
+            <p class="westlake-product-desc">Steel performance with the aesthetic of traditional tile, shake, or shingle. Class 4 hail rated and FM Very Severe Hail certified. 100% recyclable. The most complete stone-coated steel portfolio available — hurricane-tested and transferable warranty.</p>
+            <div class="westlake-product-specs">
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Hail</span>
+                <span class="westlake-spec-val">Class 4 / FM VSH</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Fire</span>
+                <span class="westlake-spec-val">Class A</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Warranty</span>
+                <span class="westlake-spec-val">50-Year Transferable</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Material</span>
+                <span class="westlake-spec-val">100% Recyclable</span>
+              </div>
+            </div>
+            <p class="westlake-product-profiles"><strong>Profiles:</strong> Barrel-Vault Tile, Pacific Tile, Cottage Shingle, Granite-Ridge Shingle, Pine-Crest Shake &mdash; Charcoal, Ironwood, Timberwood &amp; more</p>
+          </div>
+        </div>
+
+        <!-- DAVINCI COMPOSITE -->
+        <div class="westlake-product-card fade-in fade-in-delay-2">
+          <img class="westlake-product-card-img" src="assets/img/westlake-davinci-composite-slate.png" alt="DaVinci composite slate roofing on upscale Florida home">
+          <div class="westlake-product-card-body">
+            <p class="westlake-product-label">Composite</p>
+            <h3 class="westlake-product-name">DaVinci® Roofscapes</h3>
+            <p class="westlake-product-tagline">"We fit your style. We stand up to your weather."</p>
+            <p class="westlake-product-desc">Pure virgin resin composite that captures the look of natural slate and hand-split cedar shake — without the weight, rot, or maintenance. UV-stabilized for the life of the roof. Modeled from actual slate and real shake for authentic texture and color variation.</p>
+            <div class="westlake-product-specs">
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Hail</span>
+                <span class="westlake-spec-val">Class 4 Impact</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Fire</span>
+                <span class="westlake-spec-val">Class A</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Warranty</span>
+                <span class="westlake-spec-val">Lifetime Limited</span>
+              </div>
+              <div class="westlake-spec-item">
+                <span class="westlake-spec-label">Wind</span>
+                <span class="westlake-spec-val">Hurricane Rated</span>
+              </div>
+            </div>
+            <p class="westlake-product-profiles"><strong>Profiles:</strong> Multi-Width Shake, Single-Width Shake, Multi-Width Slate, Province Slate, Inspire Slate &mdash; Aged Cedar, Weathered Gray, Mountain, Tahoe &amp; more</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FULL-WIDTH HIGHLIGHT — WHY WESTLAKE ═══ -->
+  <div class="westlake-highlight">
+    <img class="westlake-highlight-img" src="assets/img/westlake-newpoint-concrete-tile.png" alt="Luxury Florida home with premium tile roofing">
+    <div class="westlake-highlight-overlay">
+      <p class="section-eyebrow fade-in" style="margin-bottom:1rem;">Why Westlake Royal</p>
+      <h2 class="westlake-highlight-title fade-in fade-in-delay-1">Every Style.<br><em>Every Standard.</em></h2>
+      <p class="westlake-highlight-sub fade-in fade-in-delay-2">Westlake Royal is the only roofing portfolio offering genuine clay, concrete, stone-coated steel, and composite tile under one roof — all hurricane-rated, all Class A fire-rated, and all manufactured in the USA. Caliber installs the complete lineup and can help you find the right system for your home's architecture, your neighborhood's HOA requirements, and Florida's insurance climate.</p>
+      <div class="fade-in fade-in-delay-3">
+        <a href="contact.html" class="btn-gold">Get Your Free Tile Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ INSTALLATION + WARRANTY ═══ -->
   <section class="section section-dark">
     <div class="container">
       <div class="two-col">
         <div class="two-col-text fade-in">
-          <p class="section-eyebrow">The Florida Standard</p>
-          <h2>Built to Last 50+ Years</h2>
-          <p>Clay barrel tiles &mdash; the classic terracotta orange-red, S-curve profile &mdash; have defined Florida architecture for over a century. Their thermal mass regulates interior temperatures, their density resists hurricane-force winds, and their fired-clay composition never fades or corrodes in Florida&#39;s salt air and intense UV environment.</p>
-          <p>Concrete flat tiles offer the same performance in a modern, low-profile aesthetic. The sand and beige finish and clean horizontal lines complement contemporary Florida architecture while delivering the weight and durability that Florida&#39;s building code demands for long-term performance.</p>
-          <p>Both systems are heavy &mdash; which is exactly the point. Dead weight resists wind uplift. We verify structural capacity before every tile installation and handle all permitting and inspections through completion.</p>
+          <p class="section-eyebrow">Caliber Installation</p>
+          <h2>Professional Tile Installation</h2>
+          <p>Tile roofing requires more precision than any other system — correct underlayment, proper battening, precise mortar and foam adhesive application, and strict attention to uplift specifications. Caliber's installation crews are trained on Westlake Royal products and follow manufacturer installation guidelines on every job.</p>
+          <p>We verify structural capacity before every tile install. Concrete tile adds significant dead load — we assess your roof decking, framing, and span before a single tile is ordered. Every installation is permitted, inspected, and backed by our 5-year workmanship warranty on top of the manufacturer coverage.</p>
           <ul class="feature-list" role="list">
-            <li>Clay barrel tile &mdash; terracotta &amp; custom color options</li>
-            <li>Concrete flat tile &mdash; sand, beige, and designer finishes</li>
-            <li>50+ year expected service life</li>
-            <li>Hurricane wind-rated installation</li>
-            <li>Structural assessment included</li>
-            <li>Permits pulled and managed</li>
-            <li>Dedicated on-site manager on every job</li>
+            <li>Structural assessment included on every job</li>
+            <li>All permits pulled and managed by Caliber</li>
+            <li>Westlake Royal product-trained installation crews</li>
+            <li>5-Year Caliber workmanship warranty</li>
+            <li>Manufacturer warranties from 50 years to Lifetime</li>
+            <li>FORTIFIED-eligible systems available</li>
+            <li>Cool Roof options to reduce energy costs</li>
           </ul>
         </div>
         <div class="two-col-img fade-in fade-in-delay-2">
-          <img src="assets/img/tile-flat.png" alt="Modern Florida home with flat concrete tile roof">
+          <img src="assets/img/westlake-ustile-clay-roofing.png" alt="Authentic US Tile clay roof on Florida luxury estate">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TILE PROFILES -->
+  <!-- ═══ WARRANTY BOX ═══ -->
   <section class="section section-navy">
-    <div class="container">
-      <div class="section-header center fade-in">
-        <p class="section-eyebrow">Profiles</p>
-        <h2 class="section-title">Tile Profiles</h2>
-        <div class="gold-rule"></div>
-      </div>
-      <div class="grid-2">
-        <div class="fade-in fade-in-delay-1">
-          <div class="photo-card" style="aspect-ratio:4/3;">
-            <img src="assets/img/tile-hero.png" alt="Traditional terracotta clay barrel tile roof">
-            <div class="photo-card-overlay">
-              <span class="photo-card-label">Classic</span>
-              <h3 class="photo-card-title">Clay Barrel Tile</h3>
-              <p class="photo-card-desc">Traditional terracotta orange-red clay barrel tiles with S-curve profile. The signature Mediterranean Florida aesthetic.</p>
-            </div>
-          </div>
-        </div>
-        <div class="fade-in fade-in-delay-2">
-          <div class="photo-card" style="aspect-ratio:4/3;">
-            <img src="assets/img/tile-flat.png" alt="Modern sand concrete flat tile roof">
-            <div class="photo-card-overlay">
-              <span class="photo-card-label">Contemporary</span>
-              <h3 class="photo-card-title">Concrete Flat Tile</h3>
-              <p class="photo-card-desc">Modern sand/beige concrete flat tiles with low profile. Clean lines for contemporary Florida architecture.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-dark">
     <div class="container">
       <div class="warranty-box fade-in">
-        <div class="warranty-box-title">&#9679; 5-Year Workmanship Warranty</div>
-        <p>Every tile installation is backed by our 5-year workmanship warranty covering flashing, mortar, underlayment, and fastening systems. Material warranties from manufacturers typically extend 50 years to lifetime, depending on product line.</p>
+        <div class="warranty-box-title">&#9679; 5-Year Workmanship + Manufacturer Coverage</div>
+        <p>Every Westlake Royal tile installation by Caliber is backed by our 5-year workmanship warranty covering flashing, mortar, underlayment, and fastening systems — stacked on top of the manufacturer's coverage. US Tile and DaVinci carry <strong>Lifetime Limited</strong> material warranties. Unified Steel carries a <strong>50-Year Transferable</strong> warranty. Newpoint™ carries a <strong>Non-Prorated, Fully Transferable Lifetime</strong> warranty. All products are Class A fire-rated and hurricane wind-performance rated.</p>
       </div>
     </div>
   </section>
 
-  <section class="section section-navy">
+  <!-- ═══ RELATED SYSTEMS ═══ -->
+  <section class="section section-dark">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-eyebrow">Also Consider</p>
@@ -309,17 +806,17 @@
         <div class="gold-rule"></div>
       </div>
       <div class="related-grid">
-        <a href="shingle-roofing.html" class="photo-card fade-in fade-in-delay-1" style="aspect-ratio:4/3;" aria-label="Asphalt Shingle">
-          <img src="assets/img/shingle-hero.png" alt="Asphalt shingle roofing">
-          <div class="photo-card-overlay"><span class="photo-card-label">Residential</span><h3 class="photo-card-title">Asphalt Shingle</h3><span class="photo-card-arrow">Learn More &rarr;</span></div>
+        <a href="worthouse.html" class="photo-card fade-in fade-in-delay-1" style="aspect-ratio:4/3;" aria-label="Worthouse Metal and Steel">
+          <img src="assets/img/worthouse-profile.png" alt="Worthouse metal and steel roofing">
+          <div class="photo-card-overlay"><span class="photo-card-label">&#9733; Featured</span><h3 class="photo-card-title">Worthouse® Metal &amp; Steel</h3><span class="photo-card-arrow">Learn More &rarr;</span></div>
         </a>
         <a href="metal-tile-roofing.html" class="photo-card fade-in fade-in-delay-2" style="aspect-ratio:4/3;" aria-label="Stone-Coated Metal Tile">
           <img src="assets/img/metal-tile-hero.png" alt="Stone-coated metal tile">
           <div class="photo-card-overlay"><span class="photo-card-label">Residential</span><h3 class="photo-card-title">Stone-Coated Metal Tile</h3><span class="photo-card-arrow">Learn More &rarr;</span></div>
         </a>
-        <a href="metal-roofing.html" class="photo-card fade-in fade-in-delay-3" style="aspect-ratio:4/3;" aria-label="Standing Seam Metal">
-          <img src="assets/img/metal-hero.png" alt="Standing seam metal roofing">
-          <div class="photo-card-overlay"><span class="photo-card-label">Residential</span><h3 class="photo-card-title">Standing Seam Metal</h3><span class="photo-card-arrow">Learn More &rarr;</span></div>
+        <a href="shingle-roofing.html" class="photo-card fade-in fade-in-delay-3" style="aspect-ratio:4/3;" aria-label="Asphalt Shingle">
+          <img src="assets/img/shingle-hero.png" alt="Asphalt shingle roofing">
+          <div class="photo-card-overlay"><span class="photo-card-label">Residential</span><h3 class="photo-card-title">Asphalt Shingle</h3><span class="photo-card-arrow">Learn More &rarr;</span></div>
         </a>
       </div>
     </div>
@@ -328,32 +825,33 @@
   <section class="cta-section">
     <div class="container">
       <p class="section-eyebrow">Get Started</p>
-      <h2>Schedule Your Free Tile Roofing Inspection</h2>
-      <p>Our roofing specialists will assess your home&#39;s structural requirements and recommend the right tile system for your budget and aesthetic.</p>
+      <h2>Schedule Your Free Tile Roofing Consultation</h2>
+      <p>Our Westlake Royal-trained specialists will assess your home, walk you through the full product lineup, and recommend the right tile system for your budget and architecture.</p>
       <div class="cta-buttons">
-        <a href="contact.html" class="btn-gold">Schedule Free Inspection</a>
+        <a href="contact.html" class="btn-gold">Schedule Free Consultation</a>
         <a href="tel:4075178200" class="btn-outline">(407) 517-8200</a>
       </div>
     </div>
   </section>
+
 </main>
+
 <!-- MOBILE STICKY BAR -->
 <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
   <a href="tel:4075178200">&#128222; (407) 517-8200</a>
   <a href="contact.html" class="btn-gold">Free Inspection</a>
 </div>
+
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
       <div>
         <div class="footer-brand-name">Caliber</div>
         <div class="footer-brand-tagline">Boutique Roofing &middot; Central Florida</div>
         <p class="footer-brand-desc">A Central Florida construction group serving all residential and commercial roofing needs — from everyday re-roofs to high-end estates — with premium materials and a fully managed crew on every job.</p>
         <span class="footer-license">FL State Certified &middot; License #CCC1337709</span>
       </div>
-      <!-- Company -->
       <div>
         <div class="footer-col-title">Company</div>
         <ul class="footer-links">
@@ -363,7 +861,6 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <!-- Services -->
       <div>
         <div class="footer-col-title">Services</div>
         <ul class="footer-links">
@@ -377,7 +874,6 @@
           <li><a href="insurance-claims.html">Insurance Claims</a></li>
         </ul>
       </div>
-      <!-- Contact -->
       <div>
         <div class="footer-col-title">Contact</div>
         <div class="footer-contact-item">
@@ -404,7 +900,6 @@
   </div>
 </footer>
 <script src="assets/main.js" defer></script>
-  <!-- Tidio Live Chat — replace YOUR_TIDIO_KEY with your key from tidio.com/panel -->
   <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
 </body>
 </html>
