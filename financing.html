@@ -705,12 +705,15 @@
         </li>
         <li>
           <button class="nav-dropdown-trigger" aria-expanded="false">Resources<svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
-          <div class="nav-dropdown">
+          <div class="nav-dropdown nav-dropdown--resources">
+            <span class="nav-dropdown-col-header" style="font-size:0.6rem;letter-spacing:0.14em;">Company Resources</span>
             <a href="faq.html">FAQs</a>
             <a href="projects.html">Project Gallery</a>
-            <a href="financing.html" style="color:var(--gold);">Financing Options</a>
-            <a href="warranty.html">Warranties</a>
+            <a href="warranty.html">Warranties &amp; Guarantees</a>
             <a href="blog/index.html">Blog &amp; News</a>
+            <div class="nav-dropdown-divider"></div>
+            <span class="nav-dropdown-col-header" style="font-size:0.6rem;letter-spacing:0.14em;">Financing Partners</span>
+            <a href="financing.html" class="nav-dropdown-highlight">Financing Options</a>
           </div>
         </li>
         <li><a href="contact.html">Contact</a></li>
@@ -765,13 +768,26 @@
         <a href="storm-damage.html">Storm Damage Restoration</a>
         <a href="insurance-claims.html">Insurance Claims Support</a>
       </div>
-      <div class="nav-mobile-section">
-        <span class="nav-mobile-section-label">Resources</span>
-        <a href="faq.html">FAQs</a>
-        <a href="projects.html">Project Gallery</a>
-        <a href="financing.html" style="color:var(--gold);font-weight:600;">Financing Options</a>
-        <a href="warranty.html">Warranties &amp; Guarantees</a>
-        <a href="blog/index.html">Blog &amp; News</a>
+      <div class="nav-mobile-section nav-mobile-section--collapsible" data-section="resources">
+        <button class="nav-mobile-section-toggle" aria-expanded="false">
+          <span class="nav-mobile-section-label">Resources</span>
+          <svg class="nav-mobile-section-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+        </button>
+        <div class="nav-mobile-section-body">
+          <div class="nav-mobile-subsection">
+            <span class="nav-mobile-subsection-label">Company</span>
+            <a href="faq.html">FAQs</a>
+            <a href="projects.html">Project Gallery</a>
+            <a href="warranty.html">Warranties &amp; Guarantees</a>
+            <a href="blog/index.html">Blog &amp; News</a>
+          </div>
+          <div class="nav-mobile-subsection nav-mobile-subsection--partners">
+            <span class="nav-mobile-subsection-label">Financing Partners</span>
+            <a href="financing.html" class="nav-mobile-partner-link">
+              <span class="nav-mobile-partner-dot"></span>Financing Options
+            </a>
+          </div>
+        </div>
       </div>
       <div class="nav-mobile-section">
         <span class="nav-mobile-section-label">Contact</span>

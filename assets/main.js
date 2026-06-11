@@ -256,3 +256,25 @@
   }
 
 })();
+
+// ── Mobile nav: collapsible Resources section ──────────────────────────────
+(function () {
+  var collapsibles = document.querySelectorAll('.nav-mobile-section--collapsible');
+  collapsibles.forEach(function (section) {
+    var toggle = section.querySelector('.nav-mobile-section-toggle');
+    var body   = section.querySelector('.nav-mobile-section-body');
+    if (!toggle || !body) return;
+
+    // Wrap inner content for the grid trick
+    var inner = document.createElement('div');
+    inner.className = 'nav-mobile-section-body-inner';
+    while (body.firstChild) inner.appendChild(body.firstChild);
+    body.appendChild(inner);
+
+    toggle.addEventListener('click', function () {
+      var isOpen = section.classList.contains('is-open');
+      section.classList.toggle('is-open', !isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+})();

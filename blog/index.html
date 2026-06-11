@@ -88,12 +88,15 @@
         <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources
           <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
         </button>
-        <div class="nav-dropdown">
+        <div class="nav-dropdown nav-dropdown--resources">
+          <span class="nav-dropdown-col-header nav-dropdown-section-label">Company Resources</span>
           <a href="../faq.html">FAQs</a>
           <a href="../projects.html">Project Gallery</a>
-          <a href="../financing.html">Financing Options</a>
           <a href="../warranty.html">Warranties &amp; Guarantees</a>
-          <a href="index.html">Blog &amp; News</a>
+          <a href="../blog/index.html">Blog &amp; News</a>
+          <div class="nav-dropdown-divider"></div>
+          <span class="nav-dropdown-col-header nav-dropdown-section-label">Financing Partners</span>
+          <a href="../financing.html" class="nav-dropdown-highlight">Financing Options</a>
         </div>
       </li>
       <li><a href="../contact.html">Contact</a></li>
@@ -111,28 +114,78 @@
   </div>
 </nav>
 
-<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
-  <span class="nav-mobile-section-label">About</span>
-  <a href="../about.html">Our Story</a>
-  <a href="../careers.html">Careers</a>
-  <div class="nav-mobile-divider"></div>
-  <span class="nav-mobile-section-label">Services</span>
-  <a href="../shingle-roofing.html">Asphalt Shingle</a>
-  <a href="../tile-roofing.html">Clay &amp; Concrete Tile</a>
-  <a href="../metal-tile-roofing.html">Stone-Coated Metal Tile</a>
-  <a href="../metal-roofing.html">Standing Seam Metal</a>
-  <a href="../commercial-roofing.html">Commercial Roofing</a>
-  <a href="../storm-damage.html">Storm Damage</a>
-  <div class="nav-mobile-divider"></div>
-  <span class="nav-mobile-section-label">Resources</span>
-  <a href="../faq.html">FAQs</a>
-  <a href="../projects.html">Project Gallery</a>
-  <a href="index.html">Blog &amp; News</a>
-  <div class="nav-mobile-divider"></div>
-  <a href="../contact.html">Contact</a>
-  <a href="tel:4075178200" style="color:var(--gold);font-weight:700;">(407) 517-8200</a>
-  <a href="../contact.html" class="btn-gold" style="text-align:center;margin-top:0.5rem;">Free Inspection</a>
-</div>
+<div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+<nav class="nav-mobile" id="nav-drawer" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <div class="nav-mobile-drawer-header">
+    <img src="../assets/logo_full_400.png" alt="Caliber Construction Group" class="nav-mobile-drawer-logo">
+    <button class="nav-mobile-drawer-close" id="nav-drawer-close" aria-label="Close menu">&#10005;</button>
+  </div>
+  <div class="nav-mobile-cta-block">
+    <a href="tel:4075178200" class="nav-mobile-cta-phone">
+      <span class="nav-mobile-cta-phone-label">Office</span>
+      <div class="nav-mobile-cta-phone-row">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="nav-mobile-cta-phone-number">(407) 517-8200</span>
+      </div>
+    </a>
+    <a href="../contact.html" class="nav-mobile-cta-btn">Get Your Free Inspection</a>
+  </div>
+  <div class="nav-mobile-scroll">
+    <div class="nav-mobile-section"><a href="../index.html">Home</a></div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">About</span>
+      <a href="../about.html">Our Story</a>
+      <a href="../careers.html">Careers &mdash; We're Hiring</a>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Residential</span>
+      <a href="../shingle-roofing.html">Asphalt Shingle Roofing</a>
+      <a href="../tile-roofing.html">Clay &amp; Concrete Tile</a>
+      <a href="../metal-tile-roofing.html">Stone-Coated Metal Tile</a>
+      <a href="../worthouse.html">Worthouse&#174; Featured</a>
+      <a href="../metal-roofing.html">Standing Seam Metal</a>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Commercial &amp; Specialty</span>
+      <a href="../commercial-roofing.html">Commercial Roofing</a>
+      <a href="../flat-roofing.html">Flat &amp; Low-Slope</a>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Storm &amp; Insurance</span>
+      <a href="../storm-damage.html">Storm Damage Restoration</a>
+      <a href="../insurance-claims.html">Insurance Claims Support</a>
+    </div>
+    <div class="nav-mobile-section nav-mobile-section--collapsible" data-section="resources">
+      <button class="nav-mobile-section-toggle" aria-expanded="false">
+        <span class="nav-mobile-section-label">Resources</span>
+        <svg class="nav-mobile-section-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-mobile-section-body">
+        <div class="nav-mobile-subsection">
+          <span class="nav-mobile-subsection-label">Company</span>
+          <a href="../faq.html">FAQs</a>
+          <a href="../projects.html">Project Gallery</a>
+          <a href="../warranty.html">Warranties &amp; Guarantees</a>
+          <a href="index.html">Blog &amp; News</a>
+        </div>
+        <div class="nav-mobile-subsection nav-mobile-subsection--partners">
+          <span class="nav-mobile-subsection-label">Financing Partners</span>
+          <a href="../financing.html" class="nav-mobile-partner-link">
+            <span class="nav-mobile-partner-dot"></span>Financing Options
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Contact</span>
+      <a href="../contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="nav-mobile-license">
+    <strong>FL State Certified &middot; #CCC1337709</strong>
+    In partnership with Linn Engineering &amp; Design, Inc.
+  </div>
+</nav>
 
 <main>
   <!-- HERO -->

@@ -1781,3 +1781,137 @@ textarea.form-control {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
+
+/* ============================================================
+   RESOURCES NAV — DESKTOP DROPDOWN ENHANCEMENTS
+   ============================================================ */
+
+/* Section label inside dropdown (replaces col-header for inline use) */
+.nav-dropdown-section-label {
+  display: block;
+  font-size: 0.58rem !important;
+  font-weight: 700;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 0.35rem 0.75rem 0.1rem;
+  pointer-events: none;
+  margin-top: 0.15rem;
+}
+
+/* Thin gold divider between resource groups */
+.nav-dropdown-divider {
+  height: 1px;
+  background: rgba(184,145,42,0.2);
+  margin: 0.5rem 0.75rem;
+}
+
+/* Financing Partners highlight link */
+.nav-dropdown-highlight {
+  color: var(--gold) !important;
+  font-weight: 600 !important;
+  position: relative;
+}
+.nav-dropdown-highlight::before {
+  content: '';
+  position: absolute;
+  left: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.nav-dropdown-highlight { padding-left: 1.4rem !important; }
+
+/* ============================================================
+   RESOURCES NAV — MOBILE COLLAPSIBLE SECTION
+   ============================================================ */
+
+/* Toggle button — replaces static label */
+.nav-mobile-section-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.nav-mobile-section-toggle .nav-mobile-section-label {
+  pointer-events: none;
+}
+.nav-mobile-section-chevron {
+  color: var(--text-muted);
+  transition: transform 0.25s ease, color 0.2s;
+  flex-shrink: 0;
+}
+.nav-mobile-section-toggle[aria-expanded="true"] .nav-mobile-section-chevron {
+  transform: rotate(180deg);
+  color: var(--gold);
+}
+
+/* Collapsible body */
+.nav-mobile-section-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+  overflow: hidden;
+}
+.nav-mobile-section-body > * {
+  overflow: hidden;
+}
+.nav-mobile-section--collapsible.is-open .nav-mobile-section-body {
+  grid-template-rows: 1fr;
+}
+
+/* Inner wrapper needed for grid-template-rows trick */
+.nav-mobile-section-body-inner {
+  overflow: hidden;
+}
+
+/* Subsection inside collapsible */
+.nav-mobile-subsection {
+  padding-top: 0.5rem;
+}
+.nav-mobile-subsection-label {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 0.4rem 0 0.2rem;
+  pointer-events: none;
+}
+
+/* Financing Partners subsection — gold accent */
+.nav-mobile-subsection--partners {
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(184,145,42,0.18);
+}
+.nav-mobile-subsection--partners .nav-mobile-subsection-label {
+  color: rgba(184,145,42,0.7);
+}
+
+/* Partner link — gold with dot indicator */
+.nav-mobile-partner-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--gold) !important;
+  font-weight: 600 !important;
+}
+.nav-mobile-partner-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
