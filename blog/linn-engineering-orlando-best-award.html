@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proud to Work Alongside Orlando's Best — Linn Engineering & Design | Caliber Construction Group</title>
-  <meta name="description" content="Caliber Construction Group is proud to collaborate with Linn Engineering & Design, Inc. — Orlando's Best Building Engineer and a cornerstone of Central Florida's construction industry since 2006.">
+  <title>Spotlight: Linn Engineering & Design — Orlando's Best Building Engineer | Caliber Construction Group</title>
+  <meta name="description" content="Caliber Construction Group recognizes Linn Engineering & Design, Inc. — Orlando's Best Building Engineer and a trusted name in Central Florida construction.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Proud to Work Alongside Orlando's Best — Linn Engineering & Design">
-  <meta property="og:description" content="Caliber Construction Group is proud to collaborate with Linn Engineering & Design, Inc. — Orlando's Best Building Engineer award winner.">
+  <meta property="og:title" content="Spotlight: Linn Engineering & Design — Orlando's Best Building Engineer">
   <meta property="og:type" content="article">
   <link rel="icon" href="../assets/favicon_32.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +15,6 @@
   <link rel="stylesheet" href="../assets/caliber-shared.css">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="../assets/caliber-premium.css">
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR164RBGXK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,7 +25,7 @@
   <style>
     .article-hero {
       position: relative;
-      min-height: 460px;
+      min-height: 400px;
       display: flex;
       align-items: flex-end;
       background: linear-gradient(135deg, #0c1f3f 0%, #071429 100%);
@@ -37,7 +35,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(7,20,41,0.97) 0%, rgba(12,31,63,0.7) 55%, rgba(12,31,63,0.4) 100%);
+      background: linear-gradient(to top, rgba(7,20,41,0.97) 0%, rgba(12,31,63,0.5) 100%);
       z-index: 1;
     }
     .article-hero-content {
@@ -54,13 +52,12 @@
       gap: 0.5rem;
       font-family: 'Inter', sans-serif;
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.5);
       margin-bottom: 1rem;
       flex-wrap: wrap;
     }
-    .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
     .breadcrumb a:hover { color: #b8912a; }
-    .breadcrumb-sep { opacity: 0.4; }
     .article-eyebrow {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
@@ -72,11 +69,11 @@
     }
     .article-hero h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 700;
       color: #ffffff;
       line-height: 1.2;
-      margin: 0 0 1.2rem;
+      margin: 0 0 1rem;
     }
     .article-meta {
       display: flex;
@@ -87,42 +84,31 @@
     .article-meta-item {
       font-family: 'Inter', sans-serif;
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.5);
       display: flex;
       align-items: center;
       gap: 0.35rem;
+    }
+    .article-meta-item .dot {
+      width: 4px; height: 4px;
+      background: #b8912a;
+      border-radius: 50%;
+      display: inline-block;
     }
     .article-body {
       background: #0c1f3f;
       padding: 4rem 1.5rem 5rem;
     }
     .article-container {
-      max-width: 780px;
+      max-width: 720px;
       margin: 0 auto;
     }
     .article-container p {
       font-family: 'Inter', sans-serif;
       font-size: 1.05rem;
       line-height: 1.85;
-      color: rgba(240,240,240,0.88);
-      margin-bottom: 1.6rem;
-    }
-    .article-container h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700;
-      color: #ffffff;
-      margin: 2.5rem 0 1rem;
-      line-height: 1.25;
-    }
-    .article-container h3 {
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #d4a843;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin: 2rem 0 0.75rem;
+      color: rgba(240,240,240,0.85);
+      margin-bottom: 1.5rem;
     }
     .article-container a {
       color: #d4a843;
@@ -131,112 +117,86 @@
     }
     .article-container a:hover { color: #b8912a; }
 
-    /* Award spotlight card */
+    /* Award card */
     .award-card {
       display: flex;
       align-items: center;
       gap: 2rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(184,145,42,0.25);
-      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(184,145,42,0.2);
+      border-radius: 10px;
       padding: 2rem;
       margin: 2.5rem 0;
       flex-wrap: wrap;
     }
     .award-badge-wrap {
       flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+      text-align: center;
     }
     .award-badge-wrap img {
-      width: 90px;
+      width: 80px;
       height: auto;
-      border-radius: 6px;
+      border-radius: 4px;
     }
     .award-badge-caption {
       font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.4);
-      text-align: center;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.38);
+      margin-top: 0.4rem;
     }
     .award-card-body h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: #ffffff;
-      margin: 0 0 0.5rem;
-      text-transform: none;
-      letter-spacing: 0;
+      margin: 0 0 0.4rem;
     }
     .award-card-body p {
       margin: 0 0 0.75rem;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
     }
-    .award-card-body a.award-btn {
+    .award-btn {
       display: inline-block;
       background: #b8912a;
-      color: #fff;
+      color: #fff !important;
       font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      text-decoration: none;
-      padding: 0.55rem 1.25rem;
+      text-decoration: none !important;
+      padding: 0.5rem 1.1rem;
       border-radius: 4px;
       transition: background 0.2s;
     }
-    .award-card-body a.award-btn:hover { background: #d4a843; }
+    .award-btn:hover { background: #d4a843 !important; }
 
-    /* Pull quote */
-    .pull-quote {
-      border-left: 3px solid #b8912a;
-      padding: 0.75rem 0 0.75rem 1.5rem;
-      margin: 2rem 0;
-    }
-    .pull-quote p {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.35rem;
-      font-style: italic;
-      color: rgba(240,240,240,0.9);
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    /* CTA block */
     .article-cta {
-      background: linear-gradient(135deg, #071429, #0c1f3f);
-      border: 1px solid rgba(184,145,42,0.3);
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(184,145,42,0.2);
+      border-radius: 10px;
+      padding: 2rem;
       text-align: center;
       margin-top: 3rem;
     }
     .article-cta h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.75rem;
+      font-size: 1.6rem;
       color: #fff;
-      margin: 0 0 0.75rem;
-      text-transform: none;
-      letter-spacing: 0;
+      margin: 0 0 0.6rem;
     }
-    .article-cta p {
-      margin-bottom: 1.5rem;
-      font-size: 0.98rem;
-    }
+    .article-cta p { margin-bottom: 1.25rem; font-size: 0.95rem; }
     .article-cta a.btn-gold {
       display: inline-block;
       background: #b8912a;
       color: #fff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 0.85rem 2rem;
+      padding: 0.8rem 1.8rem;
       border-radius: 4px;
       transition: background 0.2s;
     }
@@ -279,74 +239,55 @@
     </div>
   </nav>
 
-<!-- Article Hero -->
 <section class="article-hero fade-in">
   <div class="article-hero-content">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
-      <span class="breadcrumb-sep">›</span>
+      <span style="opacity:0.4;">›</span>
       <a href="index.html">Blog</a>
-      <span class="breadcrumb-sep">›</span>
-      <span>Linn Engineering & Design</span>
+      <span style="opacity:0.4;">›</span>
+      <span>Industry Spotlight</span>
     </nav>
     <div class="article-eyebrow">Industry Spotlight</div>
-    <h1>Proud to Work Alongside Orlando's Best — Linn Engineering & Design</h1>
+    <h1>Spotlight: Linn Engineering & Design — Orlando's Best Building Engineer</h1>
     <div class="article-meta">
       <span class="article-meta-item"><span class="dot"></span> June 2026</span>
       <span class="article-meta-item"><span class="dot"></span> Caliber Construction Group</span>
-      <span class="article-meta-item"><span class="dot"></span> 3 min read</span>
+      <span class="article-meta-item"><span class="dot"></span> 2 min read</span>
     </div>
   </div>
 </section>
 
-<!-- Article Body -->
 <section class="article-body">
   <div class="article-container">
 
-    <p>At Caliber Construction Group, we believe the quality of a roof begins long before the first shingle is installed. It starts with the right engineering foundation — and for that, we work alongside one of Central Florida's most respected structural engineering firms: <a href="https://www.linnengineering.com" target="_blank" rel="noopener">Linn Engineering & Design, Inc.</a></p>
+    <p>We want to take a moment to recognize a respected name in the Central Florida construction community — <a href="https://www.linnengineering.com" target="_blank" rel="noopener">Linn Engineering & Design, Inc.</a>, based right here in Winter Park, FL.</p>
 
-    <div class="pull-quote">
-      <p>"A great roof isn't just about materials — it's about the engineering behind it."</p>
-    </div>
-
-    <!-- Award Card -->
     <div class="award-card">
       <div class="award-badge-wrap">
-        <img src="../assets/img/linn-orlandos-best-award.png" alt="Orlando's Best 2024 Winner — Linn Engineering & Design" loading="lazy">
-        <span class="award-badge-caption">Orlando's Best<br>Building Engineer</span>
+        <img src="../assets/img/linn-orlandos-best-award.png" alt="Orlando's Best 2024 — Linn Engineering & Design">
+        <div class="award-badge-caption">Orlando's Best<br>Building Engineer</div>
       </div>
       <div class="award-card-body">
         <h3>Orlando's Best — Building Engineer</h3>
-        <p>Linn Engineering & Design has been recognized as Orlando's Best Building Engineer — a community award that reflects the trust Central Florida homeowners and contractors place in their work. Competing against firms across the region, this recognition is a testament to their technical precision and commitment to the built environment.</p>
+        <p>Linn Engineering & Design has earned recognition as Orlando's Best Building Engineer — a community award voted on by locals across the region. It's a well-deserved nod to a firm that has been a trusted presence in Florida's construction industry since 2006.</p>
         <a href="https://orlandosbest.com/directory/linn-engineering-design/" target="_blank" rel="noopener" class="award-btn">View Their Award Listing →</a>
       </div>
     </div>
 
-    <h2>Who Is Linn Engineering & Design?</h2>
-    <p>Founded in 2006 and headquartered at 711 Executive Drive in Winter Park, FL, Linn Engineering & Design, Inc. is a full-service structural and building engineering firm that has spent nearly two decades transforming Florida's commercial and residential construction landscape. From structural assessments to complex design challenges, their team brings a depth of expertise that sets projects up for long-term success.</p>
+    <p>Linn Engineering & Design operates out of 711 Executive Drive in Winter Park and has built a strong reputation for structural and building engineering across a wide range of Florida projects. If you're a homeowner or contractor in need of engineering services, they're worth a call.</p>
 
-    <p>Their work spans a wide range of project types across Central Florida — and their reputation for accuracy, responsiveness, and professionalism is exactly why Caliber Construction Group trusts them on our projects.</p>
-
-    <h2>Why This Partnership Matters to You</h2>
-    <p>When you hire Caliber Construction Group, you're not just getting a roofing crew — you're getting the full backing of a vetted engineering team. That means when your project requires structural review, load calculations, or permitting support, we have the right professionals already in our corner.</p>
-
-    <p>This matters most on complex projects: commercial roofing systems, large residential re-roofs, storm damage assessments, and new construction builds where engineering sign-off is required by Florida building code. Having Linn Engineering in our network means fewer delays, faster permitting, and a finished product that's built to last.</p>
-
-    <h2>Connect With Linn Engineering & Design</h2>
-    <p>If you're a homeowner, contractor, or developer in Central Florida who needs structural engineering support, we encourage you to reach out to their team directly:</p>
-
-    <ul style="font-family:'Inter',sans-serif;font-size:1rem;line-height:2;color:rgba(240,240,240,0.88);padding-left:1.5rem;margin-bottom:1.6rem;">
+    <ul style="font-family:'Inter',sans-serif;font-size:1rem;line-height:2.1;color:rgba(240,240,240,0.85);padding-left:1.5rem;margin-bottom:1.5rem;">
       <li><strong style="color:#d4a843;">Website:</strong> <a href="https://www.linnengineering.com" target="_blank" rel="noopener">linnengineering.com</a></li>
       <li><strong style="color:#d4a843;">Address:</strong> 711 Executive Dr, Winter Park, FL 32789</li>
       <li><strong style="color:#d4a843;">Phone:</strong> <a href="tel:4077755194">(407) 775-5194</a></li>
     </ul>
 
-    <p>At Caliber, we're proud to be connected to firms that share our standard of excellence. Linn Engineering & Design is one of those firms — and their Orlando's Best recognition is well earned.</p>
+    <p>Congratulations to the Linn Engineering & Design team on the recognition — it's great to see quality work acknowledged in our local community.</p>
 
-    <!-- CTA -->
     <div class="article-cta">
-      <h3>Ready to Start Your Roofing Project?</h3>
-      <p>From simple repairs to full commercial installations — Caliber has the team and the partners to get it done right.</p>
+      <h3>Need a Roof Inspection?</h3>
+      <p>Caliber Construction Group serves all of Central Florida — residential, commercial, and storm damage.</p>
       <a href="../contact.html" class="btn-gold">Schedule a Free Inspection</a>
     </div>
 
