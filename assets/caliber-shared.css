@@ -336,7 +336,7 @@ table { border-collapse: collapse; width: 100%; }
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-6);
   flex-shrink: 0;
 }
 
