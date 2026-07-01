@@ -75,7 +75,7 @@
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(184,145,42,0.18);
-  height: 72px;
+  height: 84px;
   transition: background var(--t-med), box-shadow var(--t-med);
 }
 
@@ -86,7 +86,7 @@
 
 /* Logo image sizing */
 .nav-logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   object-fit: contain;
   transition: opacity var(--t-fast);
@@ -1522,7 +1522,7 @@
 
   /* Logo — sized down for mobile */
   .nav-logo-img {
-    height: 38px;
+    height: 52px;
   }
 
   /* Hide desktop nav links + phone on mobile */
