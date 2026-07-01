@@ -729,7 +729,7 @@
    ============================================================ */
 .crew-section {
   position: relative;
-  height: 560px;
+  height: 620px;
   overflow: hidden;
 }
 
@@ -754,6 +754,7 @@
   );
   display: flex;
   align-items: center;
+  padding-block: 3rem;
 }
 
 .crew-section-text {
