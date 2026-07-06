@@ -24,10 +24,10 @@
       display: flex;
       align-items: flex-end;
       overflow: hidden;
-      background: #071429;
+      background: #071429 url('assets/img/premier-metals-standing-seam.png') center 30% / cover no-repeat;
     }
     .mo-hero-bg {
-      position: absolute; inset: 0;
+      position: absolute; inset: 0; z-index: 0;
       background-image: url('assets/img/premier-metals-standing-seam.png');
       background-size: cover;
       background-position: center 30%;
@@ -36,7 +36,7 @@
     }
     .mo-hero-bg.loaded { transform: scale(1); }
     .mo-hero-overlay {
-      position: absolute; inset: 0;
+      position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(165deg, rgba(7,20,41,0.25) 0%, rgba(7,20,41,0.5) 45%, rgba(7,20,41,0.95) 100%);
     }
     .mo-hero-content {
