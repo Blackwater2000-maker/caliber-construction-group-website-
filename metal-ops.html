@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metal Ops — Premier Metal Supplier | Caliber Construction Group</title>
-  <meta name="description" content="Metal Ops is Caliber Construction Group's premier metal roofing supplier — Florida Product Approved panels, Kynar 500 finishes, and 30+ colors for residential and commercial roofing.">
+  <title>Metal Ops — Premier Metal Roofing Supplier | Caliber Construction Group</title>
+  <meta name="description" content="Metal Ops supplies Florida Product Approved standing seam and metal roofing panels to Caliber Construction Group — F-15 Snap Lock, F-15 Mechanical Seam, F-10 Nailstrip, F-5V Crimp. Kynar 500 finishes. HVHZ approved.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,18 +15,464 @@
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon_256.png">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR164RBGXK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GR164RBGXK');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GR164RBGXK');</script>
+  <style>
+    /* ── Metal Ops Page Styles ── */
+    .mo-hero {
+      position: relative;
+      min-height: 680px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #071429;
+    }
+    .mo-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://metal-ops.com/wp-content/uploads/2025/03/f-15-mechanical-seam-home.webp');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.03);
+      transition: transform 8s ease;
+    }
+    .mo-hero-bg.loaded { transform: scale(1); }
+    .mo-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(165deg, rgba(7,20,41,0.25) 0%, rgba(7,20,41,0.5) 45%, rgba(7,20,41,0.95) 100%);
+    }
+    .mo-hero-content {
+      position: relative; z-index: 2;
+      padding: 6rem 2rem 5rem;
+      max-width: 860px;
+    }
+    .mo-hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(184,145,42,0.15);
+      border: 1px solid rgba(184,145,42,0.4);
+      color: var(--gold);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.35rem 0.9rem; border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+    .mo-hero h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 800; line-height: 1.06;
+      color: #fff; margin: 0 0 1.25rem;
+    }
+    .mo-hero p {
+      color: rgba(240,240,240,0.85);
+      font-size: var(--text-base); line-height: 1.7;
+      max-width: 58ch; margin: 0 0 2rem;
+    }
+    .mo-hero-stats {
+      display: flex; flex-wrap: wrap; gap: 2rem;
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 1px solid rgba(184,145,42,0.25);
+    }
+    .mo-hero-stat { text-align: left; }
+    .mo-hero-stat-val {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.9rem; font-weight: 800;
+      color: var(--gold); line-height: 1;
+    }
+    .mo-hero-stat-label {
+      font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(240,240,240,0.6); margin-top: 0.3rem;
+    }
+
+    /* Partner badge strip */
+    .mo-partner-strip {
+      background: var(--navy-deep, #071429);
+      border-bottom: 1px solid rgba(184,145,42,0.2);
+      padding: 1.4rem 2rem;
+    }
+    .mo-partner-strip-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+    }
+    .mo-partner-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35); white-space: nowrap;
+    }
+    .mo-partner-logos {
+      display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;
+    }
+    .mo-partner-name {
+      font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.75);
+      letter-spacing: 0.04em;
+    }
+    .mo-partner-sep { color: rgba(184,145,42,0.3); }
+    .mo-cert-badges {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+    .mo-cert-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(184,145,42,0.1); border: 1px solid rgba(184,145,42,0.25);
+      color: var(--gold); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.3rem 0.65rem; border-radius: 2px;
+    }
+
+    /* About Section */
+    .mo-about {
+      background: var(--light-bg, #f8f9fb);
+      padding: 5rem 2rem;
+    }
+    .mo-about-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+      align-items: center;
+    }
+    .mo-about-img {
+      position: relative; border-radius: 3px; overflow: hidden;
+    }
+    .mo-about-img img {
+      width: 100%; height: 480px; object-fit: cover; display: block;
+    }
+    .mo-about-img-accent {
+      position: absolute; bottom: -1.5rem; right: -1.5rem;
+      width: 120px; height: 120px;
+      background: var(--gold); opacity: 0.12; border-radius: 2px;
+    }
+    .mo-about-text {}
+    .mo-about-text .section-eyebrow { margin-bottom: 0.75rem; }
+    .mo-about-text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      margin-bottom: 1.25rem;
+    }
+    .mo-about-text p {
+      color: var(--text-muted, #4a5568);
+      font-size: 1.0rem; line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .mo-about-bullets {
+      list-style: none; padding: 0; margin: 1.5rem 0;
+    }
+    .mo-about-bullets li {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      font-size: 0.92rem; color: var(--text); line-height: 1.6;
+      padding: 0.45rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .mo-about-bullets li:last-child { border-bottom: none; }
+    .mo-about-bullets li::before {
+      content: '✦'; color: var(--gold); font-size: 0.65rem;
+      margin-top: 0.3rem; flex-shrink: 0;
+    }
+
+    /* Panels Section */
+    .mo-panels {
+      background: #0c1f3f;
+      padding: 5.5rem 2rem;
+    }
+    .mo-panels-header {
+      text-align: center; max-width: 700px; margin: 0 auto 4rem;
+    }
+    .mo-panels-header h2 { color: #fff; }
+    .mo-panels-header p { color: rgba(240,240,240,0.7); margin-top: 0.75rem; }
+
+    .mo-panel-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .mo-panel-card {
+      background: #0a1828;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .mo-panel-card:hover { transform: translateY(-3px); }
+    .mo-panel-photo {
+      width: 100%; height: 300px; object-fit: cover; display: block;
+      transition: transform 0.5s ease;
+    }
+    .mo-panel-card:hover .mo-panel-photo { transform: scale(1.03); }
+    .mo-panel-photo-wrap { overflow: hidden; position: relative; }
+    .mo-panel-hvhz {
+      position: absolute; top: 1rem; right: 1rem;
+      background: rgba(7,20,41,0.85); backdrop-filter: blur(4px);
+      border: 1px solid rgba(184,145,42,0.5);
+      color: var(--gold); font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.28rem 0.6rem; border-radius: 2px;
+    }
+    .mo-panel-body { padding: 1.75rem 2rem 2rem; }
+    .mo-panel-type {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.5rem;
+    }
+    .mo-panel-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: #fff; margin: 0 0 1rem; line-height: 1.2;
+    }
+    .mo-panel-desc {
+      font-size: 0.88rem; line-height: 1.7;
+      color: rgba(240,240,240,0.65);
+      margin-bottom: 1.25rem;
+    }
+    .mo-panel-specs {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .mo-panel-spec {
+      background: rgba(255,255,255,0.04);
+      padding: 0.65rem 0.75rem; border-radius: 2px;
+    }
+    .mo-panel-spec-label {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.35);
+      margin-bottom: 0.2rem;
+    }
+    .mo-panel-spec-val {
+      font-size: 0.88rem; font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .mo-panel-approval {
+      font-size: 0.7rem; color: rgba(255,255,255,0.4);
+      margin-top: 0.75rem; padding-top: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .mo-panel-approval strong { color: rgba(255,255,255,0.65); }
+    .mo-panel-drawing-row {
+      display: flex; align-items: center; gap: 1rem; margin: 1.25rem 0;
+    }
+    .mo-panel-drawing {
+      width: 140px; height: auto; background: rgba(255,255,255,0.05);
+      border-radius: 2px; padding: 0.5rem;
+    }
+
+    /* F-5V full width */
+    .mo-panel-card--wide {
+      grid-column: 1 / -1;
+      display: grid; grid-template-columns: 1.1fr 1fr;
+    }
+    .mo-panel-card--wide .mo-panel-photo-wrap {
+      height: 100%; min-height: 340px;
+    }
+    .mo-panel-card--wide .mo-panel-photo {
+      height: 100%; min-height: 340px;
+    }
+
+    /* Color Section */
+    .mo-colors {
+      background: #f8f9fb;
+      padding: 5.5rem 2rem;
+    }
+    .mo-colors-inner { max-width: 1200px; margin: 0 auto; }
+    .mo-colors-header { margin-bottom: 3rem; }
+    .mo-colors-header h2 { margin-bottom: 0.75rem; }
+    .mo-colors-header p {
+      color: var(--text-muted); font-size: 1rem; max-width: 62ch;
+    }
+
+    .mo-kynar-banner {
+      background: #0c1f3f;
+      border-left: 4px solid var(--gold);
+      padding: 1.5rem 2rem;
+      border-radius: 3px;
+      margin-bottom: 2.5rem;
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+    }
+    .mo-kynar-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--gold); letter-spacing: -0.01em; white-space: nowrap;
+    }
+    .mo-kynar-logo span { color: rgba(255,255,255,0.4); font-weight: 300; font-size: 0.9rem; }
+    .mo-kynar-desc {
+      font-size: 0.88rem; line-height: 1.7;
+      color: rgba(240,240,240,0.75);
+      flex: 1; min-width: 240px;
+    }
+
+    /* Color chip grid from Metal Alliance */
+    .mo-color-chart-wrap {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .mo-color-chart-header {
+      background: #0c1f3f;
+      padding: 1rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .mo-color-chart-header-title {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .mo-color-chart-header-sub {
+      font-size: 0.72rem; color: rgba(255,255,255,0.45);
+    }
+    .mo-color-chart-img-wrap {
+      width: 100%; display: flex; justify-content: center;
+      background: #1a1a2e; padding: 1.5rem;
+    }
+    .mo-color-chart-img {
+      width: 100%; max-width: 900px; height: auto; display: block;
+      border-radius: 2px;
+    }
+
+    /* Manual color swatches — 30+ Kynar colors */
+    .mo-color-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1px;
+      background: #e0e0e0;
+      border: 1px solid #e0e0e0;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .mo-swatch {
+      background: #fff;
+      display: flex; flex-direction: column;
+    }
+    .mo-swatch-chip {
+      height: 72px; width: 100%;
+      transition: filter 0.2s;
+    }
+    .mo-swatch:hover .mo-swatch-chip { filter: brightness(1.05); }
+    .mo-swatch-label {
+      padding: 0.5rem 0.65rem 0.6rem;
+      font-size: 0.72rem; font-weight: 600;
+      color: #333; line-height: 1.3;
+    }
+    .mo-swatch-finish {
+      display: block;
+      font-size: 0.62rem; font-weight: 400; color: #888;
+      margin-top: 0.1rem;
+    }
+
+    .mo-color-download {
+      background: #0c1f3f;
+      border-radius: 3px; padding: 1.25rem 1.75rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .mo-color-download p {
+      font-size: 0.88rem; color: rgba(255,255,255,0.75);
+      margin: 0; max-width: 50ch;
+    }
+    .mo-color-download a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--gold); color: #0c1f3f;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 0.65rem 1.25rem; border-radius: 2px; text-decoration: none;
+      white-space: nowrap; transition: background 0.2s, transform 0.15s;
+    }
+    .mo-color-download a:hover { background: var(--gold-mid); transform: translateY(-1px); }
+
+    /* Certs + Specs strip */
+    .mo-certs {
+      background: #071429;
+      padding: 4rem 2rem;
+    }
+    .mo-certs-inner {
+      max-width: 1200px; margin: 0 auto;
+    }
+    .mo-certs-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5px; background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 3px; overflow: hidden;
+    }
+    .mo-cert-item {
+      background: #0a1828;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .mo-cert-icon {
+      font-size: 2rem; margin-bottom: 0.75rem;
+    }
+    .mo-cert-val {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--gold); line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .mo-cert-name {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(255,255,255,0.9);
+      margin-bottom: 0.4rem;
+    }
+    .mo-cert-sub {
+      font-size: 0.73rem; color: rgba(255,255,255,0.4); line-height: 1.5;
+    }
+
+    /* Approval section */
+    .mo-approvals {
+      background: var(--light-bg, #f8f9fb);
+      padding: 4rem 2rem;
+    }
+    .mo-approvals-inner { max-width: 1200px; margin: 0 auto; }
+    .mo-approval-table-wrap { overflow-x: auto; margin-top: 2rem; }
+    .mo-approval-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .mo-approval-table th {
+      background: #0c1f3f; color: var(--gold);
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.85rem 1rem;
+      text-align: left;
+    }
+    .mo-approval-table td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #e8e8e8;
+      color: var(--text);
+    }
+    .mo-approval-table tr:hover td { background: rgba(12,31,63,0.03); }
+    .mo-approval-table .check-yes { color: #2d7a22; font-weight: 700; }
+    .mo-approval-table .check-no  { color: #aaa; }
+
+    /* CTA Section */
+    .mo-cta {
+      background: linear-gradient(135deg, #0c1f3f 0%, #071429 60%, #0a1520 100%);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .mo-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('https://metal-ops.com/wp-content/uploads/2025/03/f-15-mechanical-seam-roof-close-up.webp');
+      background-size: cover; background-position: center;
+      opacity: 0.08;
+    }
+    .mo-cta-inner { position: relative; z-index: 2; }
+    .mo-cta h2 { color: #fff; margin-bottom: 1rem; }
+    .mo-cta p {
+      color: rgba(240,240,240,0.75);
+      max-width: 56ch; margin: 0 auto 2.5rem;
+      font-size: 1.05rem; line-height: 1.75;
+    }
+    .mo-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .mo-about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mo-about-img img { height: 320px; }
+      .mo-panel-grid { grid-template-columns: 1fr; }
+      .mo-panel-card--wide { grid-template-columns: 1fr; }
+      .mo-panel-card--wide .mo-panel-photo { height: 280px; }
+      .mo-certs-grid { grid-template-columns: repeat(2, 1fr); }
+      .mo-partner-strip-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
+    @media (max-width: 600px) {
+      .mo-hero-stats { gap: 1.25rem; }
+      .mo-hero-stat-val { font-size: 1.5rem; }
+      .mo-panel-specs { grid-template-columns: 1fr; }
+      .mo-certs-grid { grid-template-columns: 1fr 1fr; }
+      .mo-color-swatches { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    }
+  </style>
 </head>
 <body>
-<!-- NAVIGATION -->
-<!-- NAVIGATION -->
-<!-- ENGINEERING PARTNER BAR -->
-<div class="partner-bar" aria-label="Partner information">
+
+<!-- PARTNER BAR -->
+<div class="partner-bar" aria-label="License information">
   <div class="partner-bar-track">
     <span class="partner-bar-item"><span class="partner-bar-text">Licensed Contractor</span><span class="partner-bar-sep">·</span><span class="partner-bar-name">Linn Contracting, LLC — CBC1263376</span></span>
     <span class="partner-bar-item"><span class="partner-bar-sep" style="opacity:0.3;">✦</span></span>
@@ -43,33 +489,24 @@
   </div>
 </div>
 
+<!-- NAVIGATION -->
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Caliber Construction Group Home">
       <img src="assets/logo_full_400.png" alt="Caliber Construction Group" class="nav-logo-img">
     </a>
-
     <ul class="nav-links" role="list">
-      <!-- Home -->
       <li><a href="index.html">Home</a></li>
-      <!-- About -->
       <li>
-        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-          About
-          <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
-        </button>
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">About<svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
         <div class="nav-dropdown">
           <a href="about.html">Our Story</a>
           <a href="about.html#standard">Our Standard</a>
           <a href="careers.html">Careers — We're Hiring</a>
         </div>
       </li>
-      <!-- Services -->
       <li>
-        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-          Services
-          <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
-        </button>
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
         <div class="nav-dropdown wide">
           <div>
             <span class="nav-dropdown-col-header">Residential</span>
@@ -87,413 +524,612 @@
           <div>
             <span class="nav-dropdown-col-header">Storm &amp; Insurance</span>
             <a href="storm-damage.html">Storm Damage Restoration</a>
-            </div>
+          </div>
         </div>
       </li>
-      <!-- Resources -->
       <li>
-        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-          Resources
-          <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
-        </button>
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
         <div class="nav-dropdown nav-dropdown--resources">
-            <span class="nav-dropdown-col-header nav-dropdown-section-label">Company Resources</span>
-            <a href="faq.html">FAQs</a>
-            <a href="projects.html">Project Gallery</a>
-            <a href="warranty.html">Warranties &amp; Guarantees</a>
-            <a href="blog/index.html">Blog &amp; News</a>
-            <div class="nav-dropdown-divider"></div>
-            <span class="nav-dropdown-col-header nav-dropdown-section-label">Manufacturers</span>
-            <a href="tile-roofing.html#westlake" class="nav-dropdown-highlight">Westlake Royal — Tile Products</a>
-            <a href="worthouse.html" class="nav-dropdown-highlight">Worthouse&#174; — Metal &amp; Steel</a>
-            <a href="metal-roofing.html#premier-metals" class="nav-dropdown-highlight">Premier Metal Roof MFG</a>
-            <a href="metal-ops.html" class="nav-dropdown-highlight">Metal Ops — Premier Metal Supplier</a>
-            <div class="nav-dropdown-divider"></div>
-            <span class="nav-dropdown-col-header nav-dropdown-section-label">Financing</span>
-            <a href="financing.html" class="nav-dropdown-highlight">Financing Options</a>
-          </div>
+          <span class="nav-dropdown-col-header nav-dropdown-section-label">Company Resources</span>
+          <a href="faq.html">FAQs</a>
+          <a href="projects.html">Project Gallery</a>
+          <a href="warranty.html">Warranties &amp; Guarantees</a>
+          <a href="blog/index.html">Blog &amp; News</a>
+          <div class="nav-dropdown-divider"></div>
+          <span class="nav-dropdown-col-header nav-dropdown-section-label">Manufacturers</span>
+          <a href="tile-roofing.html#westlake" class="nav-dropdown-highlight">Westlake Royal — Tile Products</a>
+          <a href="worthouse.html" class="nav-dropdown-highlight">Worthouse&#174; — Metal &amp; Steel</a>
+          <a href="metal-roofing.html#premier-metals" class="nav-dropdown-highlight">Premier Metal Roof MFG</a>
+          <a href="metal-ops.html" class="nav-dropdown-highlight" aria-current="page">Metal Ops — Premier Metal Supplier</a>
+          <a href="certainteed.html" class="nav-dropdown-highlight">CertainTeed — Landmark Shingles</a>
+          <div class="nav-dropdown-divider"></div>
+          <span class="nav-dropdown-col-header nav-dropdown-section-label">Financing</span>
+          <a href="financing.html" class="nav-dropdown-highlight">Financing Options</a>
+        </div>
       </li>
       <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="tel:4075015550" class="nav-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (407) 501-5550
+      </a>
+      <a href="contact.html" class="btn-gold">Free Inspection</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 
-
-<main id="main-content">
-
-  <!-- HERO -->
-  <section class="page-hero" style="background: var(--navy-deep); padding: 7rem 0 5rem; position: relative; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(12,31,63,0.97) 40%, rgba(184,145,42,0.08) 100%);"></div>
-    <div class="container" style="position: relative; z-index: 1;">
-      <p class="section-eyebrow" style="color: var(--gold);">Premier Metal Supplier</p>
-      <h1 style="font-size: clamp(2.5rem,6vw,4rem); font-weight: 800; color: white; line-height: 1.1; max-width: 700px; margin-bottom: 1.25rem;">Metal Ops<br><span style="color: var(--gold);">Florida's #1 Metal Roofing Distributor</span></h1>
-      <p style="color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 580px; line-height: 1.7; margin-bottom: 2rem;">Caliber Construction Group sources metal panels exclusively through Metal Ops — South Florida's most trusted distributor. Every panel is American-made, Florida Product Approved, and coated with industry-leading Kynar 500® finishes.</p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="contact.html" class="btn-gold">Get a Free Metal Roof Quote</a>
-        <a href="metal-roofing.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.75); font-size: 0.95rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px;">View Metal Roofing &rarr;</a>
+<!-- MOBILE NAV BACKDROP -->
+<div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+<nav class="nav-mobile" id="nav-drawer" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <div class="nav-mobile-drawer-header">
+    <img src="assets/logo_full_400.png" alt="Caliber Construction Group" class="nav-mobile-drawer-logo">
+    <button class="nav-mobile-close" aria-label="Close menu">&#10005;</button>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="tel:4075015550" class="nav-mobile-cta-phone">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="nav-mobile-cta-phone-number">(407) 501-5550</span>
+    </a>
+    <a href="contact.html" class="nav-mobile-cta-btn">Get Your Free Inspection</a>
+  </div>
+  <div class="nav-mobile-scroll">
+    <div class="nav-mobile-section"><a href="index.html">Home</a></div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">About</span>
+      <a href="about.html">Our Story</a>
+      <a href="about.html#standard">Our Standard</a>
+      <a href="careers.html">Careers — We're Hiring</a>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Residential</span>
+      <a href="shingle-roofing.html">Asphalt Shingle Roofing</a>
+      <a href="tile-roofing.html">Clay &amp; Concrete Tile</a>
+      <a href="metal-tile-roofing.html">Stone-Coated Metal Tile</a>
+      <a href="worthouse.html">Worthouse&#174; Metal &amp; Steel</a>
+      <a href="metal-roofing.html">Standing Seam Metal</a>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Commercial &amp; Specialty</span>
+      <a href="commercial-roofing.html">Commercial Roofing</a>
+      <a href="flat-roofing.html">Flat &amp; Low-Slope</a>
+    </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Storm &amp; Insurance</span>
+      <a href="storm-damage.html">Storm Damage Restoration</a>
+    </div>
+    <div class="nav-mobile-section nav-mobile-section--collapsible" data-section="resources">
+      <button class="nav-mobile-section-toggle" aria-expanded="false">
+        <span class="nav-mobile-section-label">Resources</span>
+        <svg class="nav-mobile-section-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-mobile-section-body">
+        <div class="nav-mobile-subsection">
+          <span class="nav-mobile-subsection-label">Company</span>
+          <a href="faq.html">FAQs</a>
+          <a href="projects.html">Project Gallery</a>
+          <a href="warranty.html">Warranties &amp; Guarantees</a>
+          <a href="blog/index.html">Blog &amp; News</a>
+        </div>
+        <div class="nav-mobile-subsection nav-mobile-subsection--partners">
+          <span class="nav-mobile-subsection-label">Manufacturers</span>
+          <a href="tile-roofing.html#westlake" class="nav-mobile-partner-link"><span class="nav-mobile-partner-dot"></span>Westlake Royal — Tile Products</a>
+          <a href="worthouse.html" class="nav-mobile-partner-link"><span class="nav-mobile-partner-dot"></span>Worthouse&#174; — Metal &amp; Steel</a>
+          <a href="metal-roofing.html#premier-metals" class="nav-mobile-partner-link"><span class="nav-mobile-partner-dot"></span>Premier Metal Roof MFG</a>
+          <a href="metal-ops.html" class="nav-mobile-partner-link"><span class="nav-mobile-partner-dot"></span>Metal Ops — Premier Metal Supplier</a>
+          <a href="certainteed.html" class="nav-mobile-partner-link"><span class="nav-mobile-partner-dot"></span>CertainTeed — Landmark Shingles</a>
+        </div>
+        <div class="nav-mobile-subsection nav-mobile-subsection--partners">
+          <span class="nav-mobile-subsection-label">Financing</span>
+          <a href="financing.html" class="nav-mobile-partner-link"><span class="nav-mobile-partner-dot"></span>Financing Options</a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- WHY METAL OPS -->
-  <section class="section" style="background: var(--light-bg); padding: 5rem 0;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        <div>
-          <p class="section-eyebrow">Why Metal Ops</p>
-          <h2 style="margin-bottom: 1rem;">Roofer-Run. Florida-Focused. Built to Perform.</h2>
-          <p style="color: #555; line-height: 1.75; margin-bottom: 1rem;">Metal Ops was founded with one objective: support roofing contractors better than anyone else in the industry. As a roofer-managed distributor, they understand what's needed on the job — quality materials, fast delivery, and expert guidance.</p>
-          <p style="color: #555; line-height: 1.75; margin-bottom: 2rem;">Every panel they supply is manufactured from American-made steel or aluminum, painted in the USA, and engineered to meet Florida's demanding building codes — including Miami-Dade HVHZ (High Velocity Hurricane Zone) requirements.</p>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div style="background: white; padding: 1rem 1.25rem; border-radius: 8px; border-left: 3px solid var(--gold);">
-              <div style="font-weight: 700; color: var(--navy); margin-bottom: 0.25rem;">American-Made</div>
-              <div style="font-size: 0.85rem; color: #666;">Steel cast &amp; painted in the USA by American personnel</div>
-            </div>
-            <div style="background: white; padding: 1rem 1.25rem; border-radius: 8px; border-left: 3px solid var(--gold);">
-              <div style="font-weight: 700; color: var(--navy); margin-bottom: 0.25rem;">FL Product Approved</div>
-              <div style="font-size: 0.85rem; color: #666;">HVHZ &amp; non-HVHZ approved for residential &amp; commercial</div>
-            </div>
-            <div style="background: white; padding: 1rem 1.25rem; border-radius: 8px; border-left: 3px solid var(--gold);">
-              <div style="font-weight: 700; color: var(--navy); margin-bottom: 0.25rem;">Same-Day Custom</div>
-              <div style="font-size: 0.85rem; color: #666;">Same-day customizations, tailored panel lengths per project</div>
-            </div>
-            <div style="background: white; padding: 1rem 1.25rem; border-radius: 8px; border-left: 3px solid var(--gold);">
-              <div style="font-weight: 700; color: var(--navy); margin-bottom: 0.25rem;">Fast Delivery</div>
-              <div style="font-size: 0.85rem; color: #666;">"If you need it yesterday, we got you" — rapid fulfillment</div>
-            </div>
-          </div>
-        </div>
-        <div style="background: var(--navy); border-radius: 16px; padding: 2.5rem; color: white;">
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); font-weight: 700; margin-bottom: 1.5rem;">Sourced From Top Manufacturers</div>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem; background: rgba(255,255,255,0.06); border-radius: 8px;">
-              <div style="width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 800; font-size: 0.7rem; color: var(--navy);">MA</div>
-              <div>
-                <div style="font-weight: 600; font-size: 0.95rem;">Metal Alliance</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.55);">Premium PVDF Kynar 500® panels — 25–40yr coating warranty</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem; background: rgba(255,255,255,0.06); border-radius: 8px;">
-              <div style="width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 800; font-size: 0.7rem; color: var(--navy);">SM</div>
-              <div>
-                <div style="font-weight: 600; font-size: 0.95rem;">Sheffield Metals</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.55);">Industry leader in standing seam systems &amp; coatings</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem; background: rgba(255,255,255,0.06); border-radius: 8px;">
-              <div style="width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 800; font-size: 0.7rem; color: var(--navy);">DM</div>
-              <div>
-                <div style="font-weight: 600; font-size: 0.95rem;">Drexel Metals</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.55);">Architectural-grade concealed fastener systems</div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: rgba(255,255,255,0.45); text-align: center;">
-            All panels meet or exceed Florida Building Code requirements
-          </div>
-        </div>
-      </div>
+    <div class="nav-mobile-section">
+      <span class="nav-mobile-section-label">Contact</span>
+      <a href="contact.html">Contact Us</a>
     </div>
-  </section>
+  </div>
+  <div class="nav-mobile-license">
+    <strong>FL State Certified &middot; #CCC1337709</strong>
+    Licensed Contractor: Linn Contracting, LLC — CBC1263376
+  </div>
+</nav>
 
-  <!-- PANEL LINEUP -->
-  <section class="section" style="padding: 5rem 0;">
-    <div class="container">
-      <p class="section-eyebrow">Panel Options</p>
-      <h2 style="margin-bottom: 0.5rem;">Four Panel Systems. One Standard of Quality.</h2>
-      <p style="color: var(--text-muted); max-width: 620px; margin-bottom: 3rem;">Metal Ops offers a curated lineup matched to installation skill level, project type, and aesthetic preference — all Florida Product Approved.</p>
+<!-- FLOATING CALL BUTTON -->
+<a href="tel:4075015550" class="float-call-btn" aria-label="Call (407) 501-5550">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+<main>
 
-        <!-- F-15 Snap Lock -->
-        <div style="border: 1px solid #e2e2e2; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-          <div style="background: var(--navy); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
-            <div>
-              <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); font-weight: 700;">Best Seller</div>
-              <h3 style="color: white; font-size: 1.15rem; font-weight: 700; margin: 0.2rem 0 0;">F-15 Snap Lock</h3>
-            </div>
-            <div style="background: rgba(184,145,42,0.15); border: 1px solid rgba(184,145,42,0.3); padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;">HVHZ Approved</div>
-          </div>
-          <div style="padding: 1.5rem;">
-            <p style="color: #555; font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem;">Hidden fastener snap-lock system requiring no mechanical seaming tool — fast deployment with exceptional wind resistance. The 7/16" continuous seam with advanced clip system accommodates Florida's extreme thermal movement cycles.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> No mechanical seaming — rapid deployment</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> 7/16" thick continuous seam transitions</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Exceptional wind resistance — Florida Product Approved HVHZ &amp; non-HVHZ</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Advanced clip system for thermal expansion &amp; contraction</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Available in galvanized steel, galvalume, &amp; aluminum</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> 30+ Kynar 500® colors with custom options</li>
-            </ul>
-            <div style="margin-top: 1.25rem; padding: 0.75rem 1rem; background: #f7f6f2; border-radius: 8px; font-size: 0.82rem; color: #666; border-left: 2px solid var(--gold);">
-              <strong>Best for:</strong> Residential re-roofs, new construction, commercial — any pitch requiring a clean concealed-fastener look.
-            </div>
-          </div>
+  <!-- ══ HERO ══ -->
+  <section class="mo-hero" aria-label="Metal Ops product hero">
+    <div class="mo-hero-bg" id="moHeroBg"></div>
+    <div class="mo-hero-overlay"></div>
+    <div class="mo-hero-content container fade-in">
+      <div class="mo-hero-badge">&#9733; Premier Metal Supplier &middot; Florida Product Approved</div>
+      <h1 class="mo-hero">Metal Ops Standing Seam Panels</h1>
+      <p>Florida's most complete line of factory-roll-formed standing seam and exposed-fastener metal roofing panels — HVHZ-approved, Kynar 500 finished, and delivered directly to your job site.</p>
+      <div class="cta-buttons" style="margin-top:0;">
+        <a href="contact.html" class="btn-gold">Request a Metal Quote</a>
+        <a href="tel:4075015550" class="btn-outline">(407) 501-5550</a>
+      </div>
+      <div class="mo-hero-stats">
+        <div class="mo-hero-stat">
+          <div class="mo-hero-stat-val">5</div>
+          <div class="mo-hero-stat-label">Panel Profiles</div>
         </div>
-
-        <!-- F-15 Mechanical Seam -->
-        <div style="border: 1px solid #e2e2e2; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-          <div style="background: #1a2f55; padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
-            <div>
-              <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); font-weight: 700;">Commercial Grade</div>
-              <h3 style="color: white; font-size: 1.15rem; font-weight: 700; margin: 0.2rem 0 0;">F-15 Mechanical Seam</h3>
-            </div>
-            <div style="background: rgba(184,145,42,0.15); border: 1px solid rgba(184,145,42,0.3); padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;">Most Versatile</div>
-          </div>
-          <div style="padding: 1.5rem;">
-            <p style="color: #555; font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem;">The industry's most versatile panel — mechanically seamed for maximum structural integrity. Advanced clip system allows wide thermal movement tolerance, making it ideal for Florida's dramatic temperature cycles. Supports tapered panels, radius curves, and seamless pitch breaks.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Mechanically locked seams — unwavering security in harsh conditions</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Compatible with Tapered Panels, Radius Panels &amp; pitch breaks</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Classic architectural lines — most prestigious appearance</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Superior thermal movement tolerance vs. snap-lock</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> 30+ Kynar 500® colors, galvanized steel, galvalume, aluminum</li>
-            </ul>
-            <div style="margin-top: 1.25rem; padding: 0.75rem 1rem; background: #f7f6f2; border-radius: 8px; font-size: 0.82rem; color: #666; border-left: 2px solid var(--gold);">
-              <strong>Best for:</strong> Complex commercial roofs, low-slope applications, curved or tapered architectural projects.
-            </div>
-          </div>
+        <div class="mo-hero-stat">
+          <div class="mo-hero-stat-val">30+</div>
+          <div class="mo-hero-stat-label">Kynar 500 Colors</div>
         </div>
-
-        <!-- F-10 Nailstrip -->
-        <div style="border: 1px solid #e2e2e2; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-          <div style="background: #243a6b; padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
-            <div>
-              <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); font-weight: 700;">Best Value</div>
-              <h3 style="color: white; font-size: 1.15rem; font-weight: 700; margin: 0.2rem 0 0;">F-10 Nailstrip</h3>
-            </div>
-            <div style="background: rgba(184,145,42,0.15); border: 1px solid rgba(184,145,42,0.3); padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;">Budget Friendly</div>
-          </div>
-          <div style="padding: 1.5rem;">
-            <p style="color: #555; font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem;">High-performance nailstrip panel that balances budget without sacrificing style or functionality. The slotted nail strip ensures a secure, consistent installation — ideal for contractors seeking a fast, clean installation with proven durability.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Slotted nail strip for secure, consistent installation</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Rapid deployment — no specialized seaming equipment</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Exceptional value — durable, long-lasting construction</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> 30+ Kynar 500® colors available</li>
-            </ul>
-            <div style="margin-top: 1.25rem; padding: 0.75rem 1rem; background: #f7f6f2; border-radius: 8px; font-size: 0.82rem; color: #666; border-left: 2px solid var(--gold);">
-              <strong>Best for:</strong> Budget-conscious residential projects where speed and value are the priority.
-            </div>
-          </div>
+        <div class="mo-hero-stat">
+          <div class="mo-hero-stat-val">HVHZ</div>
+          <div class="mo-hero-stat-label">FL Product Approved</div>
         </div>
-
-        <!-- F-5V Crimp -->
-        <div style="border: 1px solid #e2e2e2; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-          <div style="background: #2a3d70; padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
-            <div>
-              <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); font-weight: 700;">Florida Classic</div>
-              <h3 style="color: white; font-size: 1.15rem; font-weight: 700; margin: 0.2rem 0 0;">F-5V Crimp</h3>
-            </div>
-            <div style="background: rgba(184,145,42,0.15); border: 1px solid rgba(184,145,42,0.3); padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;">Coastal Look</div>
-          </div>
-          <div style="padding: 1.5rem;">
-            <p style="color: #555; font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem;">The timeless V-shaped rib profile — iconic across Florida's coastal communities and Keys properties. Low-profile, cost-effective, and unmistakably Floridian. Delivers classic appeal with enduring strength at a competitive price point.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Classic V-rib low-profile design — iconic Florida aesthetic</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Most cost-effective metal panel option</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> Operational versatility — residential &amp; commercial</li>
-              <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #444;"><span style="color: var(--gold); flex-shrink: 0;">✓</span> 30+ Kynar 500® colors available</li>
-            </ul>
-            <div style="margin-top: 1.25rem; padding: 0.75rem 1rem; background: #f7f6f2; border-radius: 8px; font-size: 0.82rem; color: #666; border-left: 2px solid var(--gold);">
-              <strong>Best for:</strong> Florida coastal homes, Keys properties, agricultural buildings, traditional Florida architecture.
-            </div>
-          </div>
+        <div class="mo-hero-stat">
+          <div class="mo-hero-stat-val">40yr</div>
+          <div class="mo-hero-stat-label">Material Warranty</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KYNAR 500 COLORS -->
-  <section class="section" style="background: var(--navy-deep); padding: 5rem 0;">
-    <div class="container">
-      <p class="section-eyebrow" style="color: var(--gold);">Kynar 500® Finish System</p>
-      <h2 style="color: white; margin-bottom: 0.75rem;">30+ Colors. Industry's Best Coating.</h2>
-      <p style="color: rgba(255,255,255,0.65); max-width: 640px; margin-bottom: 3rem; font-size: 1rem; line-height: 1.7;">Kynar 500® is the gold standard in metal roof coatings — a 70% PVDF fluoropolymer resin system from Arkema. Metal Ops leverages the full strength of Kynar 500® on every panel for unmatched color retention, UV resistance, and longevity in Florida's harsh sun and humidity.</p>
+  <!-- ══ PARTNER STRIP ══ -->
+  <div class="mo-partner-strip">
+    <div class="mo-partner-strip-inner">
+      <span class="mo-partner-label">Material Suppliers</span>
+      <div class="mo-partner-logos">
+        <span class="mo-partner-name">Metal Alliance</span>
+        <span class="mo-partner-sep">/</span>
+        <span class="mo-partner-name">Drexel Metals</span>
+      </div>
+      <div class="mo-cert-badges">
+        <span class="mo-cert-badge">✓ FL Product Approved</span>
+        <span class="mo-cert-badge">✓ HVHZ Certified</span>
+        <span class="mo-cert-badge">✓ LEED Eligible</span>
+        <span class="mo-cert-badge">✓ Keystone Certified</span>
+      </div>
+    </div>
+  </div>
 
-      <!-- Kynar warranty summary -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem;">
-        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(184,145,42,0.25); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--gold); line-height: 1;">40</div>
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-top: 0.25rem;">Year Film Integrity</div>
-          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.75rem; line-height: 1.5;">Coating will not crack, peel, or lose adhesion for 40 years</div>
+  <!-- ══ ABOUT METAL OPS ══ -->
+  <section class="mo-about" aria-label="About Metal Ops">
+    <div class="mo-about-inner">
+      <div class="mo-about-img fade-in">
+        <img src="https://metal-ops.com/wp-content/uploads/2025/04/f-15-snaplock-fabrication-1024x576.webp"
+             alt="Metal Ops roll-forming fabrication process for standing seam panels"
+             loading="lazy">
+        <div class="mo-about-img-accent"></div>
+      </div>
+      <div class="mo-about-text fade-in fade-in-delay-2">
+        <p class="section-eyebrow">Why Metal Ops</p>
+        <h2>Factory-Formed Panels. Florida-Approved Performance.</h2>
+        <p>Metal Ops manufactures standing seam and exposed-fastener roof panels that are tested, approved, and engineered for Florida's high-velocity hurricane zone requirements. Every panel profile carries current Florida Product Approval — including HVHZ certification for Broward and Miami-Dade counties.</p>
+        <p>Caliber Construction Group sources Metal Ops panels because the quality, consistency, and documentation standards are built for Florida's demanding code environment. When a permit requires backup, the approval sheets are ready.</p>
+        <ul class="mo-about-bullets">
+          <li>Factory roll-formed panels with tight dimensional tolerances for clean, consistent seams on every run</li>
+          <li>22, 24, and 26-gauge Galvalume steel options plus .032 and .040 aluminum</li>
+          <li>Copper panels available on F-15 Mechanical Seam profile for premium applications</li>
+          <li>70% PVDF (Kynar 500) coating on all panels — superior fade and chalk resistance</li>
+          <li>Up to 40-year material and finish warranty</li>
+          <li>Florida License: #CCC1331638</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PANEL PROFILES ══ -->
+  <section class="mo-panels" aria-label="Metal Ops panel profiles">
+    <div class="mo-panels-header fade-in">
+      <p class="section-eyebrow" style="color:var(--gold);">Panel Profiles</p>
+      <h2 style="color:#fff;">Five Profiles. One Standard.</h2>
+      <p>From concealed-fastener mechanical seam to exposed-fastener utility panels — every profile is Florida Product Approved and available in the full Kynar 500 color range.</p>
+    </div>
+
+    <div class="mo-panel-grid">
+
+      <!-- F-15 MECHANICAL SEAM -->
+      <div class="mo-panel-card fade-in">
+        <div class="mo-panel-photo-wrap">
+          <img class="mo-panel-photo"
+               src="https://metal-ops.com/wp-content/uploads/2025/03/f-15-mechanical-seam-home.webp"
+               alt="F-15 Mechanical Seam standing seam roof installed on Florida home"
+               loading="lazy">
+          <span class="mo-panel-hvhz">HVHZ ✓</span>
         </div>
-        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(184,145,42,0.25); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--gold); line-height: 1;">30</div>
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-top: 0.25rem;">Year Fade Resistance</div>
-          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.75rem; line-height: 1.5;">Color change &lt;5 &Delta;E Hunter units for 30 years on roof applications</div>
-        </div>
-        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(184,145,42,0.25); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--gold); line-height: 1;">30</div>
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-top: 0.25rem;">Year Chalk Resistance</div>
-          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.75rem; line-height: 1.5;">Chalking &lt; ASTM D-4214 rating of 8 for 30 years</div>
+        <div class="mo-panel-body">
+          <div class="mo-panel-type">Mechanical Standing Seam</div>
+          <h3 class="mo-panel-name">F-15 Mechanical Seam</h3>
+          <p class="mo-panel-desc">The premier concealed-fastener profile. Mechanically seamed on-site for a fully locked, watertight panel that allows thermal movement without compromising the seal. Ideal for low-slope applications starting at 1:12 pitch.</p>
+          <div class="mo-panel-specs">
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Coverage Width</div>
+              <div class="mo-panel-spec-val">12″, 16″, or 20″</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Gauge Options</div>
+              <div class="mo-panel-spec-val">22 / 24 / 26 ga steel<br>.032 / .040 Al, Copper</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Seam Height</div>
+              <div class="mo-panel-spec-val">1.5″ mechanically seamed</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Min. Slope</div>
+              <div class="mo-panel-spec-val">1:12 (low-slope)</div>
+            </div>
+          </div>
+          <div class="mo-panel-approval">
+            <strong>FL Product Approval:</strong> FL31653.03 &amp; FL31653.08 &mdash; HVHZ &amp; Non-HVHZ
+          </div>
         </div>
       </div>
 
-      <!-- Color swatches -->
-      <h3 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Standard Kynar 500® Color Palette</h3>
-      <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 1.75rem;">Representative colors — actual samples available upon request. Custom colors available.</p>
-      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
-        <!-- Whites / Lights -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #f5f2e8; border: 1px solid rgba(255,255,255,0.15); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Glacier White</div>
+      <!-- F-15 SNAP LOCK -->
+      <div class="mo-panel-card fade-in fade-in-delay-1">
+        <div class="mo-panel-photo-wrap">
+          <img class="mo-panel-photo"
+               src="https://metal-ops.com/wp-content/uploads/2025/04/f-15-snaplock-home-2.webp"
+               alt="F-15 Snap Lock standing seam roof on residential home"
+               loading="lazy">
+          <span class="mo-panel-hvhz">HVHZ ✓</span>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #e8e0cc; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Sierra Tan</div>
+        <div class="mo-panel-body">
+          <div class="mo-panel-type">Snap-Lock Standing Seam</div>
+          <h3 class="mo-panel-name">F-15 Snap Lock</h3>
+          <p class="mo-panel-desc">The most popular concealed-fastener profile for residential installations. Panels snap together with no special tools required, reducing installation time while delivering a clean, architectural standing seam finish.</p>
+          <div class="mo-panel-specs">
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Coverage Width</div>
+              <div class="mo-panel-spec-val">15″ or 19″</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Gauge Options</div>
+              <div class="mo-panel-spec-val">24 / 26 ga steel<br>.032 / .040 aluminum</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Seam Height</div>
+              <div class="mo-panel-spec-val">1.5″ snap-lock</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Installation</div>
+              <div class="mo-panel-spec-val">Concealed fastener</div>
+            </div>
+          </div>
+          <div class="mo-panel-approval">
+            <strong>FL Product Approval:</strong> FL30780.03 &amp; FL30780.04 &mdash; HVHZ &amp; Non-HVHZ
+          </div>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #d4c9a8; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Parchment</div>
+      </div>
+
+      <!-- F-10 NAILSTRIP -->
+      <div class="mo-panel-card fade-in">
+        <div class="mo-panel-photo-wrap">
+          <img class="mo-panel-photo"
+               src="https://metal-ops.com/wp-content/uploads/2025/04/f-10-nailstrip-home.webp"
+               alt="F-10 Nailstrip standing seam roof profile"
+               loading="lazy">
+          <span class="mo-panel-hvhz">HVHZ ✓</span>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #bbb8b0; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Sterling Grey</div>
+        <div class="mo-panel-body">
+          <div class="mo-panel-type">Nailstrip Snap-Lock</div>
+          <h3 class="mo-panel-name">F-10 Nailstrip</h3>
+          <p class="mo-panel-desc">A versatile snap-lock panel with a factory-formed nailstrip flange that speeds installation while maintaining a clean standing seam appearance. Excellent value for high-volume residential re-roofs where installation efficiency matters.</p>
+          <div class="mo-panel-specs">
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Coverage Width</div>
+              <div class="mo-panel-spec-val">15″ or 19″</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Gauge Options</div>
+              <div class="mo-panel-spec-val">24 / 26 ga steel<br>.032 / .040 aluminum</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Seam Height</div>
+              <div class="mo-panel-spec-val">1.0″ nailstrip</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Best For</div>
+              <div class="mo-panel-spec-val">Residential re-roofs</div>
+            </div>
+          </div>
+          <div class="mo-panel-approval">
+            <strong>FL Product Approval:</strong> FL29523.03 &amp; FL29523.04 &mdash; HVHZ &amp; Non-HVHZ
+          </div>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #8d8d8d; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Zinc Grey</div>
+      </div>
+
+      <!-- F-15 NAILSTRIP -->
+      <div class="mo-panel-card fade-in fade-in-delay-1">
+        <div class="mo-panel-photo-wrap">
+          <img class="mo-panel-photo"
+               src="https://metal-ops.com/wp-content/uploads/2025/04/f-10-nailstrip-neighborhood-1024x576.webp"
+               alt="Standing seam metal roofing across neighborhood installation"
+               loading="lazy">
+          <span class="mo-panel-hvhz">HVHZ ✓</span>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #5a5a5a; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Charcoal Grey</div>
+        <div class="mo-panel-body">
+          <div class="mo-panel-type">Nailstrip Snap-Lock</div>
+          <h3 class="mo-panel-name">F-15 Nailstrip</h3>
+          <p class="mo-panel-desc">A taller-seam version of the nailstrip profile — the 1.5″ seam height provides a bolder standing seam shadow line while retaining the installation speed advantage of the nailstrip attachment method.</p>
+          <div class="mo-panel-specs">
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Coverage Width</div>
+              <div class="mo-panel-spec-val">15″ or 19″</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Gauge Options</div>
+              <div class="mo-panel-spec-val">24 / 26 ga steel<br>.032 / .040 aluminum</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Seam Height</div>
+              <div class="mo-panel-spec-val">1.5″ nailstrip</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">HVHZ Note</div>
+              <div class="mo-panel-spec-val">24 ga only for HVHZ</div>
+            </div>
+          </div>
+          <div class="mo-panel-approval">
+            <strong>FL Product Approval:</strong> FL29523.03 &mdash; 24-gauge only in HVHZ
+          </div>
         </div>
-        <!-- Darks / Blacks -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #2a2a2a; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Graphite Black</div>
+      </div>
+
+      <!-- F-5V CRIMP — Full Width -->
+      <div class="mo-panel-card mo-panel-card--wide fade-in">
+        <div class="mo-panel-photo-wrap">
+          <img class="mo-panel-photo"
+               src="https://metal-ops.com/wp-content/uploads/2025/04/f-5v-crimp-fabrication-1024x683.webp"
+               alt="F-5V Crimp exposed fastener metal roofing panels being fabricated"
+               loading="lazy">
+          <span class="mo-panel-hvhz">HVHZ ✓</span>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Matte Black</div>
+        <div class="mo-panel-body">
+          <div class="mo-panel-type">Exposed Fastener</div>
+          <h3 class="mo-panel-name">F-5V Crimp</h3>
+          <p class="mo-panel-desc">The classic exposed-fastener panel widely used on commercial buildings, agricultural structures, and utility applications. The distinctive V-crimp profile delivers exceptional structural rigidity with simple installation — no special seaming equipment required. A cost-effective solution for commercial re-roofs and large-format projects where the exposed fastener aesthetic is acceptable.</p>
+          <div class="mo-panel-specs">
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Coverage Width</div>
+              <div class="mo-panel-spec-val">21″ or 24″</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Gauge Options</div>
+              <div class="mo-panel-spec-val">24 / 26 ga steel<br>.032 / .040 aluminum</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Attachment</div>
+              <div class="mo-panel-spec-val">Exposed fastener</div>
+            </div>
+            <div class="mo-panel-spec">
+              <div class="mo-panel-spec-label">Best For</div>
+              <div class="mo-panel-spec-val">Commercial / Agricultural</div>
+            </div>
+          </div>
+          <div class="mo-panel-approval">
+            <strong>FL Product Approval:</strong> FL31652.01 &amp; FL31652.02 &mdash; HVHZ &amp; Non-HVHZ
+          </div>
         </div>
-        <!-- Browns / Bronzes -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #6b4f2f; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Saddle Tan</div>
+      </div>
+
+    </div><!-- /mo-panel-grid -->
+  </section>
+
+  <!-- ══ KYNAR 500 COLORS ══ -->
+  <section class="mo-colors" aria-label="Kynar 500 color options">
+    <div class="mo-colors-inner">
+      <div class="mo-colors-header fade-in">
+        <p class="section-eyebrow">Finish &amp; Color</p>
+        <h2>Kynar 500® Color Palette</h2>
+        <p>Every Metal Ops panel is finished with 70% PVDF — the Kynar 500 coating standard. Over 30 standard colors are available through Metal Alliance, with custom colors available on qualified orders.</p>
+      </div>
+
+      <!-- Kynar Banner -->
+      <div class="mo-kynar-banner fade-in">
+        <div class="mo-kynar-logo">Kynar 500<sup style="font-size:0.6em;vertical-align:super;">®</sup> <span>/ 70% PVDF Finish</span></div>
+        <p class="mo-kynar-desc">Kynar 500 is the benchmark fluoropolymer coating for metal roofing — formulated to resist chalking, fading, and UV degradation in Florida's intense sun. The 70% PVDF formula delivers measurably superior fade resistance compared to standard polyester or SMP finishes, with warranty coverage extending up to 40 years on qualified panels.</p>
+      </div>
+
+      <!-- Live color chart image from Metal Ops -->
+      <div class="mo-color-chart-wrap fade-in">
+        <div class="mo-color-chart-header">
+          <span class="mo-color-chart-header-title">Metal Alliance — Standard Color Chart</span>
+          <span class="mo-color-chart-header-sub">Kynar 500 Finish · 70% PVDF</span>
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #7a5c3a; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Medium Bronze</div>
+        <div class="mo-color-chart-img-wrap">
+          <img class="mo-color-chart-img"
+               src="https://metal-ops.com/wp-content/uploads/2025/03/metal-alliance-color-sheets.webp"
+               alt="Metal Alliance Kynar 500 standard color chart for Metal Ops standing seam panels"
+               loading="lazy">
         </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #5c3d1f; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Musket</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #3d2510; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Dark Bronze</div>
-        </div>
+      </div>
+
+      <!-- Color swatches — representative Kynar 500 colors -->
+      <div class="fade-in" style="margin-bottom:1rem;">
+        <p style="font-size:0.78rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">Representative Color Selection — Kynar 500 / Metal Alliance</p>
+      </div>
+      <div class="mo-color-swatches fade-in">
+        <!-- Charcoals / Blacks -->
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#2b2b2b;"></div><div class="mo-swatch-label">Charcoal Gray<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#1a1a1a;"></div><div class="mo-swatch-label">Matte Black<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#3a3a3a;"></div><div class="mo-swatch-label">Coal Black<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <!-- Grays -->
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#7a7a7a;"></div><div class="mo-swatch-label">Medium Gray<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#a8a8a8;"></div><div class="mo-swatch-label">Light Gray<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#b0b8c0;"></div><div class="mo-swatch-label">Slate Gray<span class="mo-swatch-finish">Kynar 500</span></div></div>
         <!-- Blues -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #3a6ea8; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Tahoe Blue</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #2a5080; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Pacific Blue</div>
-        </div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#2e4a6b;"></div><div class="mo-swatch-label">Navy Blue<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#4a7aab;"></div><div class="mo-swatch-label">Ocean Blue<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#7aaecc;"></div><div class="mo-swatch-label">Sky Blue<span class="mo-swatch-finish">Kynar 500</span></div></div>
         <!-- Greens -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #4a7055; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Hemlock Green</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #2d5240; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Forest Green</div>
-        </div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#2e5c3e;"></div><div class="mo-swatch-label">Forest Green<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#3d7a55;"></div><div class="mo-swatch-label">Hunter Green<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#5a8c6a;"></div><div class="mo-swatch-label">Patina Green<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <!-- Tans / Browns -->
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#8b7355;"></div><div class="mo-swatch-label">Weathered Tan<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#c4a96a;"></div><div class="mo-swatch-label">Antique Bronze<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#6b4e37;"></div><div class="mo-swatch-label">Copper Brown<span class="mo-swatch-finish">Kynar 500</span></div></div>
         <!-- Reds / Terracotta -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #c0522a; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Terra Cotta</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: #9e2a2a; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Colonial Red</div>
-        </div>
-        <!-- Metallics -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: linear-gradient(135deg, #c0c0c0, #e8e8e8, #a8a8a8); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Metallic Silver</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: linear-gradient(135deg, #c8a96a, #e0c878, #b89040); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Champagne</div>
-        </div>
-        <!-- Plus indicator -->
-        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <div style="height: 52px; border-radius: 8px; background: rgba(184,145,42,0.12); border: 1px dashed rgba(184,145,42,0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 0.4rem; width: 100%;">
-            <span style="color: var(--gold); font-size: 1.5rem; font-weight: 700;">+</span>
-          </div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">10+ More</div>
-        </div>
-        <!-- Antique Patina -->
-        <div style="text-align: center;">
-          <div style="height: 52px; border-radius: 8px; background: linear-gradient(135deg, #7a9e7a, #5a8a6a, #6aaa7a); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.4rem;"></div>
-          <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65);">Antique Patina</div>
-        </div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#8b3a3a;"></div><div class="mo-swatch-label">Rustic Red<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#c1603a;"></div><div class="mo-swatch-label">Terra Cotta<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <!-- Whites / Creams -->
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#e8e4dc;border:1px solid #ddd;"></div><div class="mo-swatch-label">Polar White<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#d8d0c0;border:1px solid #ddd;"></div><div class="mo-swatch-label">Champagne<span class="mo-swatch-finish">Kynar 500</span></div></div>
+        <div class="mo-swatch"><div class="mo-swatch-chip" style="background:#c8c4b8;border:1px solid #ddd;"></div><div class="mo-swatch-label">Linen<span class="mo-swatch-finish">Kynar 500</span></div></div>
       </div>
-      <div style="margin-top: 1.5rem; text-align: center; padding: 1rem; background: rgba(184,145,42,0.08); border-radius: 8px; border: 1px solid rgba(184,145,42,0.2);">
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin: 0;">Actual colors may vary from digital representation. Physical samples are available — contact Caliber for a color consultation before your project begins.</p>
+
+      <div class="mo-color-download fade-in">
+        <p>Download the complete Metal Alliance Kynar 500 color chart to see every available shade with finish specifications and material codes.</p>
+        <a href="https://metal-ops.com/wp-content/uploads/2025/05/MetalAllianceColor-Chart-1.pdf" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Full Color Chart (PDF)
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- WHY METAL ROOF -->
-  <section class="section" style="padding: 5rem 0; background: var(--light-bg);">
-    <div class="container">
-      <p class="section-eyebrow">The Metal Advantage</p>
-      <h2 style="margin-bottom: 0.5rem;">Built for Florida. Built to Last 50+ Years.</h2>
-      <p style="color: var(--text-muted); max-width: 600px; margin-bottom: 3rem;">Metal roofing carries a higher initial cost than asphalt — but in Florida's climate, it consistently outperforms every other roofing system on longevity, durability, and total cost of ownership.</p>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-        <div style="background: white; padding: 1.75rem; border-radius: 10px; border: 1px solid #e2e2e2;">
-          <div style="width: 44px; height: 44px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8912a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Hurricane Resilience</h4>
-          <p style="font-size: 0.88rem; color: #555; line-height: 1.6;">Standing seam panels are Florida Product Approved for HVHZ — engineered to withstand the wind loads required by Miami-Dade and Florida Building Code in hurricane-prone regions.</p>
+  <!-- ══ CERTIFICATIONS + PERFORMANCE ══ -->
+  <section class="mo-certs" aria-label="Certifications and performance">
+    <div class="mo-certs-inner">
+      <div class="section-header center fade-in" style="margin-bottom:2.5rem;">
+        <p class="section-eyebrow" style="color:var(--gold);">Performance Standards</p>
+        <h2 style="color:#fff;">Engineered for Florida</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="mo-certs-grid fade-in">
+        <div class="mo-cert-item">
+          <div class="mo-cert-icon">🌀</div>
+          <div class="mo-cert-val">HVHZ</div>
+          <div class="mo-cert-name">Approved</div>
+          <div class="mo-cert-sub">Broward &amp; Miami-Dade county high-velocity hurricane zone certification on all 5 panel profiles</div>
         </div>
-        <div style="background: white; padding: 1.75rem; border-radius: 10px; border: 1px solid #e2e2e2;">
-          <div style="width: 44px; height: 44px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8912a" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </div>
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Energy Efficiency</h4>
-          <p style="font-size: 0.88rem; color: #555; line-height: 1.6;">Kynar 500® light colors carry high Solar Reflectance Index (SRI) ratings, reflecting heat and reducing attic temperatures significantly — translating to meaningful AC savings year-round in Florida.</p>
+        <div class="mo-cert-item">
+          <div class="mo-cert-icon">⚡</div>
+          <div class="mo-cert-val">Kynar 500</div>
+          <div class="mo-cert-name">70% PVDF</div>
+          <div class="mo-cert-sub">Industry-leading fluoropolymer coating — not polyester, not SMP — Kynar 500 on every panel</div>
         </div>
-        <div style="background: white; padding: 1.75rem; border-radius: 10px; border: 1px solid #e2e2e2;">
-          <div style="width: 44px; height: 44px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8912a" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Long-Term ROI</h4>
-          <p style="font-size: 0.88rem; color: #555; line-height: 1.6;">A properly installed metal roof typically lasts 40–70 years with minimal maintenance. Compared to replacing an asphalt roof every 15–25 years in Florida's climate, the lifetime cost is substantially lower.</p>
+        <div class="mo-cert-item">
+          <div class="mo-cert-icon">🏆</div>
+          <div class="mo-cert-val">40-Year</div>
+          <div class="mo-cert-name">Warranty</div>
+          <div class="mo-cert-sub">Material and finish warranty coverage up to 40 years on qualified panels and gauge selections</div>
+        </div>
+        <div class="mo-cert-item">
+          <div class="mo-cert-icon">🌿</div>
+          <div class="mo-cert-val">LEED</div>
+          <div class="mo-cert-name">Eligible</div>
+          <div class="mo-cert-sub">Keystone Certified and LEED-eligible for green building projects and sustainability credits</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <p class="section-eyebrow">Ready for Metal?</p>
-      <h2>Get Your Free Metal Roof Estimate</h2>
-      <p>Caliber's team will assess your property, walk you through panel options, and provide a detailed, transparent quote with no pressure.</p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn-gold">Schedule Free Estimate</a>
-        <a href="tel:4075015550" class="btn-outline">Call (407) 501-5550</a>
+  <!-- ══ FLORIDA PRODUCT APPROVALS ══ -->
+  <section class="mo-approvals" aria-label="Florida product approvals">
+    <div class="mo-approvals-inner">
+      <div class="fade-in">
+        <p class="section-eyebrow">Florida Building Code</p>
+        <h2>Florida Product Approval Numbers</h2>
+        <p style="color:var(--text-muted);max-width:62ch;margin-top:0.5rem;">Every Metal Ops panel profile carries current Florida Product Approval for both HVHZ and standard non-HVHZ applications. Required documentation is available for permit submission.</p>
+      </div>
+      <div class="mo-approval-table-wrap fade-in fade-in-delay-1">
+        <table class="mo-approval-table" aria-label="Florida Product Approval numbers">
+          <thead>
+            <tr>
+              <th>Panel Profile</th>
+              <th>Type</th>
+              <th>FL Approval # (HVHZ)</th>
+              <th>FL Approval # (Non-HVHZ)</th>
+              <th>Gauge / Material</th>
+              <th>HVHZ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>F-15 Mechanical Seam</strong></td>
+              <td>Mechanical Standing Seam</td>
+              <td>FL31653.03</td>
+              <td>FL31653.08</td>
+              <td>22/24/26 ga, .032/.040 Al, Copper</td>
+              <td><span class="check-yes">✓ Yes</span></td>
+            </tr>
+            <tr>
+              <td><strong>F-15 Snap Lock</strong></td>
+              <td>Snap-Lock Standing Seam</td>
+              <td>FL30780.03</td>
+              <td>FL30780.04</td>
+              <td>24/26 ga steel, .032/.040 Al</td>
+              <td><span class="check-yes">✓ Yes</span></td>
+            </tr>
+            <tr>
+              <td><strong>F-10 Nailstrip</strong></td>
+              <td>Nailstrip Snap-Lock</td>
+              <td>FL29523.03</td>
+              <td>FL29523.04</td>
+              <td>24/26 ga steel, .032/.040 Al</td>
+              <td><span class="check-yes">✓ Yes</span></td>
+            </tr>
+            <tr>
+              <td><strong>F-15 Nailstrip</strong></td>
+              <td>Nailstrip Snap-Lock</td>
+              <td>FL29523.03</td>
+              <td>—</td>
+              <td>24 ga only for HVHZ</td>
+              <td><span class="check-yes">✓ 24 ga only</span></td>
+            </tr>
+            <tr>
+              <td><strong>F-5V Crimp</strong></td>
+              <td>Exposed Fastener</td>
+              <td>FL31652.01</td>
+              <td>FL31652.02</td>
+              <td>24/26 ga steel, .032/.040 Al</td>
+              <td><span class="check-yes">✓ Yes</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:1.5rem;padding:1rem 1.25rem;background:#fff8e8;border-left:4px solid var(--gold);border-radius:2px;font-size:0.83rem;color:var(--text-muted);" class="fade-in">
+        <strong style="color:var(--text);">Permit Documentation:</strong> Full Florida Product Approval sheets, testing documentation, and installation guides are available on the <a href="https://metal-ops.com" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Metal Ops website</a>. Caliber will provide all required documentation at time of permit application.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="mo-cta" aria-label="Request Metal Ops quote">
+    <div class="mo-cta-inner container">
+      <p class="section-eyebrow" style="color:var(--gold);">Metal Roofing Specialists</p>
+      <h2>Ready to Specify Metal Ops for Your Project?</h2>
+      <p>Our metal roofing specialists will help you select the right panel profile, gauge, and Kynar 500 color for your project — residential, commercial, or specialty application.</p>
+      <div class="mo-cta-btns">
+        <a href="contact.html" class="btn-gold">Request a Metal Roof Quote</a>
+        <a href="tel:4075015550" class="btn-outline">(407) 501-5550</a>
       </div>
     </div>
   </section>
 
 </main>
 
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:4075015550">&#128222; (407) 501-5550</a>
+  <a href="contact.html" class="btn-gold">Free Inspection</a>
+</div>
+
+<!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
       <div>
         <div class="footer-brand-name">Caliber</div>
         <div class="footer-brand-tagline">Boutique Roofing &middot; Central Florida</div>
         <p class="footer-brand-desc">A Central Florida construction group serving all residential and commercial roofing needs — from everyday re-roofs to high-end estates — with premium materials and a fully managed crew on every job.</p>
         <span class="footer-license">FL State Certified &middot; License #CCC1337709</span>
       </div>
-      <!-- Company -->
       <div>
         <div class="footer-col-title">Company</div>
         <ul class="footer-links">
@@ -503,7 +1139,6 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <!-- Services -->
       <div>
         <div class="footer-col-title">Services</div>
         <ul class="footer-links">
@@ -514,15 +1149,13 @@
           <li><a href="flat-roofing.html">Flat &amp; Low-Slope</a></li>
           <li><a href="commercial-roofing.html">Commercial Roofing</a></li>
           <li><a href="storm-damage.html">Storm Damage</a></li>
-          <li></li>
         </ul>
       </div>
-      <!-- Contact -->
       <div>
         <div class="footer-col-title">Contact</div>
         <div class="footer-contact-item">
           <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span class="footer-contact-text"><a href="tel:4075178200">(407) 501-5550</a></span>
+          <span class="footer-contact-text"><a href="tel:4075015550">(407) 501-5550</a></span>
         </div>
         <div class="footer-contact-item">
           <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -530,7 +1163,11 @@
         </div>
         <div class="footer-contact-item">
           <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span class="footer-contact-text"><span style="font-size:0.7rem;display:block;color:var(--text-muted);margin-bottom:0.1rem;">Office</span>711 Executive Dr, Winter Park, FL 32789</span></div><div class="footer-contact-item"><span class="footer-contact-icon">&#x1F4CD;</span><span class="footer-contact-text"><span style="font-size:0.7rem;display:block;color:var(--text-muted);margin-bottom:0.1rem;">Mailing</span>PO Box 140024, Orlando, FL 32814</span>
+          <span class="footer-contact-text"><span style="font-size:0.7rem;display:block;color:var(--text-muted);margin-bottom:0.1rem;">Office</span>711 Executive Dr, Winter Park, FL 32789</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">&#x1F4CD;</span>
+          <span class="footer-contact-text"><span style="font-size:0.7rem;display:block;color:var(--text-muted);margin-bottom:0.1rem;">Mailing</span>PO Box 140024, Orlando, FL 32814</span>
         </div>
         <div class="footer-contact-item">
           <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -547,11 +1184,15 @@
     </div>
   </div>
 </footer>
-<script src="assets/main.js" defer></script>
-  <!-- Tidio Live Chat — replace YOUR_TIDIO_KEY with your key from tidio.com/panel -->
-  <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
-</body>
-</html>
 
+<script src="assets/main.js" defer></script>
+<script>
+  // Animate hero background on load
+  window.addEventListener('load', function() {
+    var bg = document.getElementById('moHeroBg');
+    if (bg) bg.classList.add('loaded');
+  });
+</script>
+<script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
 </body>
 </html>
