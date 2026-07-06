@@ -79,15 +79,15 @@
     .ct-breadcrumb-inner {
       max-width: 1200px; margin: 0 auto;
       display: flex; align-items: center; gap: 0.5rem;
-      font-size: 0.78rem; color: var(--text-muted);
+      font-size: 0.78rem; color: #4a5568;
     }
-    .ct-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .ct-breadcrumb a { color: #4a5568; text-decoration: none; }
     .ct-breadcrumb a:hover { color: var(--gold); }
     .ct-breadcrumb-sep { color: #ccc; }
-    .ct-breadcrumb-current { color: var(--text); font-weight: 600; }
+    .ct-breadcrumb-current { color: #1a1a2e; font-weight: 600; }
 
     /* Product tabs */
-    .ct-tabs-section { background: #f8f9fb; padding: 5rem 2rem; }
+    .ct-tabs-section { background: #f8f9fb; padding: 5rem 2rem; color: #1a1a2e; }
     .ct-tabs-inner { max-width: 1200px; margin: 0 auto; }
     .ct-tabs-nav {
       display: flex; gap: 0; margin-bottom: 3.5rem;
@@ -96,13 +96,13 @@
     .ct-tab-btn {
       background: none; border: none; cursor: pointer;
       padding: 1rem 2.25rem; font-family: 'Inter', sans-serif;
-      font-size: 0.88rem; font-weight: 600; color: var(--text-muted);
+      font-size: 0.88rem; font-weight: 600; color: #4a5568;
       border-bottom: 3px solid transparent; margin-bottom: -2px;
       transition: color 0.2s, border-color 0.2s;
       letter-spacing: 0.02em;
     }
     .ct-tab-btn.active { color: var(--navy, #0c1f3f); border-bottom-color: var(--gold); }
-    .ct-tab-btn:hover:not(.active) { color: var(--text); }
+    .ct-tab-btn:hover:not(.active) { color: #1a1a2e; }
     .ct-tab-panel { display: none; }
     .ct-tab-panel.active { display: block; }
 
@@ -112,8 +112,8 @@
       align-items: start; margin-bottom: 4rem;
     }
     .ct-product-intro-text {}
-    .ct-product-intro-text h2 { font-size: clamp(1.7rem, 2.8vw, 2.4rem); margin-bottom: 0.75rem; }
-    .ct-product-intro-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .ct-product-intro-text h2 { font-size: clamp(1.7rem, 2.8vw, 2.4rem); margin-bottom: 0.75rem; color: #0c1f3f; }
+    .ct-product-intro-text p { color: #4a5568; line-height: 1.8; margin-bottom: 1rem; }
     .ct-pro-badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
       background: #0c1f3f; color: var(--gold);
@@ -139,17 +139,17 @@
       text-transform: uppercase; padding: 0.8rem 1rem; text-align: left;
     }
     .ct-spec-table td {
-      padding: 0.75rem 1rem; border-bottom: 1px solid #eee; color: var(--text);
+      padding: 0.75rem 1rem; border-bottom: 1px solid #eee; color: #1a1a2e;
     }
     .ct-spec-table tr:last-child td { border-bottom: none; }
-    .ct-spec-table td:first-child { font-weight: 600; color: var(--text-muted); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .ct-spec-table td:first-child { font-weight: 600; color: #4a5568; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
     .ct-spec-table td:nth-child(2) { font-weight: 600; }
 
     /* Color swatches */
     .ct-color-section { margin-top: 3rem; }
     .ct-color-section-title {
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--text-muted); margin-bottom: 1.25rem;
+      color: #4a5568; margin-bottom: 1.25rem;
       padding-bottom: 0.75rem; border-bottom: 1px solid #e8e8e8;
       display: flex; align-items: center; gap: 0.75rem;
     }
@@ -215,7 +215,7 @@
 
     /* FL Building Code section */
     .ct-fl-section {
-      background: #f8f9fb; padding: 4.5rem 2rem;
+      background: #f8f9fb; padding: 4.5rem 2rem; color: #1a1a2e;
     }
     .ct-fl-inner { max-width: 1200px; margin: 0 auto; }
     .ct-fl-grid {
@@ -231,7 +231,7 @@
     .ct-fl-card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
     .ct-fl-card-title { font-size: 0.85rem; font-weight: 700; color: var(--navy, #0c1f3f); margin-bottom: 0.4rem; }
     .ct-fl-card-val { font-size: 1.2rem; font-weight: 800; color: var(--gold); margin-bottom: 0.5rem; }
-    .ct-fl-card-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+    .ct-fl-card-desc { font-size: 0.8rem; color: #4a5568; line-height: 1.6; }
 
     /* CTA */
     .ct-cta {
@@ -249,7 +249,7 @@
     .ct-source-note {
       background: #fff8e8; border-left: 3px solid var(--gold);
       padding: 0.85rem 1.25rem; border-radius: 2px;
-      font-size: 0.78rem; color: var(--text-muted); margin-top: 1.5rem;
+      font-size: 0.78rem; color: #4a5568; margin-top: 1.5rem;
     }
     .ct-source-note a { color: var(--gold); font-weight: 600; }
 
@@ -705,7 +705,7 @@
       <div class="fade-in">
         <p class="section-eyebrow">Florida Building Code</p>
         <h2>Certified for Florida's Toughest Requirements</h2>
-        <p style="color:var(--text-muted);max-width:62ch;margin-top:0.5rem;">The Landmark series carries all documentation required for Florida permit applications — including HVHZ counties Broward and Miami-Dade.</p>
+        <p style="color:#4a5568;max-width:62ch;margin-top:0.5rem;">The Landmark series carries all documentation required for Florida permit applications — including HVHZ counties Broward and Miami-Dade.</p>
       </div>
       <div class="ct-fl-grid">
         <div class="ct-fl-card fade-in">
