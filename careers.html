@@ -14,6 +14,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon_256.png">
+  <style>
+    .careers-application-form{max-width:680px;margin:2rem auto 0;text-align:left}
+    .careers-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+    .careers-application-form .form-control{width:100%}
+    .careers-application-form textarea.form-control{min-height:110px;resize:vertical}
+    .careers-form-note{font-size:.8rem!important;text-align:center;margin:.85rem 0 0!important}
+    @media(max-width:640px){.careers-form-grid{grid-template-columns:1fr}}
+  </style>
   <!-- Google Analytics GA4 — replace G-GR164RBGXK with your Measurement ID from analytics.google.com -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR164RBGXK"></script>
   <script>
@@ -284,12 +292,70 @@
 
       <div class="apply-box fade-in fade-in-delay-2">
         <h3>Ready to Apply?</h3>
-        <p>Send your resume and a brief note about yourself to our careers inbox. No formal cover letter required &mdash; just tell us who you are and why you want to join the team.</p>
-        <a href="contact.html" class="btn-gold">Apply via Contact Form</a>
+        <p>Share your basic information and a brief note about yourself. Your application will be addressed directly to our company email.</p>
+        <form id="careers-application-form" class="careers-application-form">
+          <div class="careers-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="career-name">Full Name *</label>
+              <input class="form-control" id="career-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="career-phone">Phone Number *</label>
+              <input class="form-control" id="career-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="careers-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="career-email">Email Address *</label>
+              <input class="form-control" id="career-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="career-experience">Sales Experience</label>
+              <select class="form-control" id="career-experience" name="experience">
+                <option value="">Select experience</option>
+                <option>Less than 1 year</option>
+                <option>1–2 years</option>
+                <option>3–5 years</option>
+                <option>5+ years</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="career-note">Brief Note</label>
+            <textarea class="form-control" id="career-note" name="note" placeholder="Tell us briefly about your experience and why you want to join Caliber."></textarea>
+          </div>
+          <button type="submit" class="btn-gold" style="border:0;cursor:pointer;">Email Application</button>
+          <p class="careers-form-note">Your email app will open with the application addressed to info@calibercgfl.com. You can attach your r&eacute;sum&eacute; before sending.</p>
+        </form>
       </div>
     </div>
   </section>
 </main>
+<script>
+  document.getElementById('careers-application-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var name = document.getElementById('career-name').value.trim();
+    var phone = document.getElementById('career-phone').value.trim();
+    var email = document.getElementById('career-email').value.trim();
+    var experience = document.getElementById('career-experience').value || 'Not provided';
+    var note = document.getElementById('career-note').value.trim() || 'Not provided';
+    var subject = 'Roofing Sales Associate Application — ' + name;
+    var body = [
+      'Roofing Sales Associate Application',
+      '',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Email: ' + email,
+      'Sales Experience: ' + experience,
+      '',
+      'Brief Note:',
+      note,
+      '',
+      'Please attach your résumé before sending, if available.'
+    ].join('\n');
+    window.location.href = 'mailto:info@calibercgfl.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
 <!-- MOBILE STICKY BAR -->
 <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
   <a href="tel:4075178200">&#128222; (407) 501-5550</a>
