@@ -3,6 +3,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "caliber-construction-group-websitev.vercel.app"
+        }
+      ],
+      "destination": "https://www.caliberconstructiongroupfl.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
